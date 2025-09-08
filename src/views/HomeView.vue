@@ -1,13 +1,21 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HeroHome from '@/component/HeroHome.vue'
+import ServicesHome from '@/component/ServicesHome.vue'
+</script>
 
 <template>
-  <div></div>
+  <HeroHome
+    title="Infortel"
+    subtitle="Web Development App Development Od Serca"
+    class="main-content"
+  />
+  <ServicesHome />
 </template>
 
 <style scoped lang="scss">
-@use '@/colors.scss' as *;
-div {
-  min-height: 100vh;
-  background-color: $gray;
+.main-content {
+  // Apply this class to your main content wrapper
+  margin-top: -56px; // Negative margin equal to navbar height
+  padding-top: 56px; // Padding to push content below navbar
 }
 </style>

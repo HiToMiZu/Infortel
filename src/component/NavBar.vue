@@ -1,24 +1,79 @@
-<script setup lang="ts"></script>
-import {RouterLink} from 'vue-router'
+<script setup lang="ts">
+import router from '@/router'
+import { RouterLink, useRoute } from 'vue-router'
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const isOnTop = ref(true)
+
+function goPage(destination: string): void {
+  router.push(destination).catch((error) => {
+    console.error('Navigation failed:', error)
+  })
+}
+const isActiveLink = (routePath: string): boolean => {
+  const route = useRoute()
+  return route.path === routePath
+}
+
+const updateScrollPosition = (): void => {
+  isOnTop.value = window.scrollY === 0
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', updateScrollPosition)
+  updateScrollPosition() // Check initial position
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', updateScrollPosition)
+})
+</script>
+
 <template>
-  <nav>
+  <nav :class="{ 'nav-top': isOnTop }">
     <div class="navbar-left">
-      <router-link to="/" class="logo">
-        <img src="/src/assets/images/infortel.png" alt="Logo" />
+      <router-link to="/" class="logo" :class="{ 'home--active': isActiveLink('/') }">
+        <img src="/src/assets/images/infortel.png" alt="Logo" width="100px" />
       </router-link>
     </div>
 
     <div class="navbar-center">
       <div class="buttons">
-        <button>Our Services</button>
-        <button>Process</button>
-        <button>Staff</button>
-        <button>Reviews</button>
+        <button
+          @click="goPage('/service')"
+          :class="{ btn: true, 'btn--active': isActiveLink('/service') }"
+        >
+          Our Services
+        </button>
+        <button
+          @click="goPage('/process')"
+          :class="{ btn: true, 'btn--active': isActiveLink('/process') }"
+        >
+          Process
+        </button>
+        <button
+          @click="goPage('/staff')"
+          :class="{ btn: true, 'btn--active': isActiveLink('/staff') }"
+        >
+          Staff
+        </button>
+        <button
+          @click="goPage('/reviews')"
+          :class="{ btn: true, 'btn--active': isActiveLink('/reviews') }"
+        >
+          Reviews
+        </button>
       </div>
     </div>
 
     <div class="navbar-right">
-      <button id="contact">Contact Us!</button>
+      <button
+        id="contact"
+        @click="goPage('/contact')"
+        :class="{ btn: true, 'btn--active': isActiveLink('/contact') }"
+      >
+        Contact Us!
+      </button>
     </div>
   </nav>
 </template>
@@ -26,22 +81,22 @@ import {RouterLink} from 'vue-router'
 <style lang="scss">
 @use '@/colors.scss' as *;
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
 nav {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  height: 52px;
+  height: 56px;
   position: sticky;
   top: 0;
-  background-color: $gray;
   z-index: 100;
-  border-bottom: 1px solid rgba(74, 144, 255, 0.1);
+  background-color: transparent;
+  transition: box-shadow 0.3s ease;
 }
+.nav-top {
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
 .navbar-left {
   display: flex;
   align-items: center;
@@ -63,7 +118,26 @@ nav {
   flex: 1;
   justify-content: flex-end;
 }
+
+.btn--active {
+  transition: box-shadow 0.3s ease;
+  box-shadow:
+    0 0 20px rgba(74, 144, 255, 0.7),
+    0 0 40px rgba(74, 144, 255, 0.5),
+    0 0 60px rgba(74, 144, 255, 0.3);
+}
+
+.btn--active:hover {
+  transition: box-shadow 0.3s ease;
+  box-shadow:
+    0 0 20px rgba(74, 144, 255, 0.9),
+    0 0 40px rgba(74, 144, 255, 0.7),
+    0 0 60px rgba(74, 144, 255, 0.5);
+}
 .logo {
+  background-color: $background;
+  border-radius: 8px;
+  width: 100px;
   box-shadow:
     0 0 20px rgba(74, 144, 255, 0.5),
     0 0 40px rgba(74, 144, 255, 0.3),
@@ -76,13 +150,9 @@ nav {
       0 0 60px rgba(74, 144, 255, 0.3);
   }
 }
-
-img {
-  display: flex;
-  background-color: white;
-  width: 100px;
-  border-radius: 8px;
-  background-color: $background;
+.home--active {
+  transition: box-shadow 0.3s ease;
+  box-shadow: 5px 4px 2px black;
 }
 .buttons {
   display: flex;
@@ -95,7 +165,7 @@ img {
     0 0 60px rgba(74, 144, 255, 0.1);
   border-radius: 8px;
 }
-button {
+.btn {
   background-color: transparent;
   border: none;
   border-radius: 8px;
@@ -112,8 +182,8 @@ button {
       0 0 60px rgba(74, 144, 255, 0.1);
   }
 }
-button#contact {
-  outline: 2px solid $supportcolor;
+.btn#contact {
+  outline: 3px solid $supportcolor;
   box-shadow:
     0 0 20px rgba(74, 144, 255, 0.5),
     0 0 40px rgba(74, 144, 255, 0.3),
@@ -123,5 +193,9 @@ button#contact {
   &:hover {
     background-color: $supportcolor;
   }
+}
+.btn--active#contact {
+  transition: background-color 0.3s ease;
+  background-color: $supportcolor;
 }
 </style>
