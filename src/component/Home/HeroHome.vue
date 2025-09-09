@@ -65,7 +65,7 @@ h1.title {
 }
 
 .subtitle {
-  width: 25vw;
+  width: 30vw;
   margin-top: 0;
   font-size: 3vw;
   color: white;

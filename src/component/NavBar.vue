@@ -43,7 +43,7 @@ onUnmounted(() => {
           @click="goPage('/service')"
           :class="{ btn: true, 'btn--active': isActiveLink('/service') }"
         >
-          Our Services
+          Services
         </button>
         <button
           @click="goPage('/process')"
@@ -91,6 +91,7 @@ nav {
   z-index: 100;
   background-color: transparent;
   transition: box-shadow 0.3s ease;
+  border-radius: 8px;
 }
 .nav-top {
   transition: box-shadow 0.3s ease;

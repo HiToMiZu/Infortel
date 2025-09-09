@@ -14,11 +14,16 @@ defineProps({
     type: String,
     default: 'Get to know more',
   },
+  image: {
+    type: String,
+    default: 'src/assets/images/code.png',
+  },
 })
 </script>
 
 <template>
   <section class="main">
+    <img :src="image" alt="" />
     <div class="text">
       <h2>{{ title }}</h2>
       <p>{{ desc }}</p>
@@ -48,6 +53,16 @@ defineProps({
   justify-content: space-between;
   position: relative;
 
+  img {
+    width: 100px;
+    align-self: center;
+    filter: brightness(100%) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg)
+      brightness(100%) contrast(100%);
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+  }
+
   &:hover {
     box-shadow:
       0 0 20px rgba(74, 144, 255, 0.5),
@@ -56,6 +71,11 @@ defineProps({
 
     h2 {
       transform: scale(1.1);
+    }
+    img {
+      transform: scale(1.1);
+      filter: brightness(0) saturate(100%) invert(68%) sepia(12%) saturate(2470%) hue-rotate(161deg)
+        brightness(85%) contrast(84%);
     }
   }
 
@@ -87,6 +107,8 @@ defineProps({
 
   .btn {
     box-shadow: 0 0 2rem 0 rgb(0 0 0 / 0.2);
+    z-index: 1;
+    background-color: white;
     transition: box-shadow 0.3s ease; // Add transition for smooth shadow change
 
     &:hover {

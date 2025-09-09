@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HeroHome from '@/component/HeroHome.vue'
-import ServicesHome from '@/component/ServicesHome.vue'
+import HeroHome from '@/component/Home/HeroHome.vue'
+import ServicesHome from '@/component/Home/ServicesHome.vue'
 </script>
 
 <template>
