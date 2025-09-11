@@ -5,10 +5,10 @@ import CardHome from './CardHome.vue'
 <template>
   <section class="services">
     <div class="text">
-      <h1 class="services__title">Nasza oferta</h1>
-      <div class="services__subtitle">To nasza specjalnosc!</div>
+      <h1 class="title">Nasza oferta</h1>
+      <div class="subtitle">To nasza specjalnosc!</div>
     </div>
-    <div class="services__cards">
+    <div class="cards">
       <CardHome
         title="Web Development"
         desc="Budujemy strony internetowe, które nie tylko dobrze wyglądają, ale przede wszystkim działają szybko, bezpiecznie i niezawodnie. Nasze projekty są w pełni responsywne i zoptymalizowane, aby zapewnić użytkownikom komfort korzystania na każdym urządzeniu. Integrujemy witryny z nowoczesnymi narzędziami oraz dbamy o ich wydajność, aby Twoja strona była realnym wsparciem w rozwoju biznesu i pozyskiwaniu nowych klientów."
@@ -37,35 +37,13 @@ import CardHome from './CardHome.vue'
 .services {
   padding: 2rem 0;
 
-  &__title {
-    text-align: center;
-    font-size: 2.5vw;
-    margin-bottom: 1rem;
-  }
-
-  &__subtitle {
-    letter-spacing: 1px;
-    text-align: center;
-    font-size: 1.3vw;
-    margin-bottom: 2rem;
-    color: #666;
-  }
-
-  &__cards {
+  .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 6rem; // Space between cards
-    padding: 2rem 3rem; // Prevents touching borders: top/bottom 2rem, left/right 4rem
-    justify-items: center; // Centers cards within their grid areas
-    align-items: stretch; // Makes all cards same height
-  }
-}
-
-// Responsive design
-@media (max-width: 768px) {
-  .services__cards {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 0; // No gap - cards touching each other
+    padding: 2rem 8rem; // Large side margins to keep them away from edges
+    justify-items: center;
+    align-items: stretch;
   }
 }
 </style>
