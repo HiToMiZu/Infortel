@@ -32,8 +32,7 @@ defineProps({
   display: flex;
   align-items: center;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('/src/assets/images/header-bg.jpeg');
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/header-bg.jpeg');
   background-size: cover;
   height: 93vh;
 }
