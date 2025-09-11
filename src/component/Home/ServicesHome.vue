@@ -12,22 +12,22 @@ import CardHome from './CardHome.vue'
       <CardHome
         title="Web Development"
         desc="Budujemy strony internetowe, które nie tylko dobrze wyglądają, ale przede wszystkim działają szybko, bezpiecznie i niezawodnie. Nasze projekty są w pełni responsywne i zoptymalizowane, aby zapewnić użytkownikom komfort korzystania na każdym urządzeniu. Integrujemy witryny z nowoczesnymi narzędziami oraz dbamy o ich wydajność, aby Twoja strona była realnym wsparciem w rozwoju biznesu i pozyskiwaniu nowych klientów."
-        image="src/assets/programming.png"
+        image="public/programming.png"
       />
       <CardHome
         title="App Development"
         desc="Tworzymy aplikacje webowe i mobilne, które odpowiadają na realne potrzeby użytkowników. Od pierwszego pomysłu, przez projekt i prototyp, aż po finalny produkt – dbamy o każdy szczegół. Nasze aplikacje są skalowalne, stabilne i łatwe w obsłudze, co sprawia, że sprawdzają się zarówno w małych projektach, jak i w dużych systemach biznesowych. Stawiamy na rozwiązania, które rozwijają Twój produkt wraz z rosnącymi wymaganiami rynku."
-        image="src/assets/app-development.png"
+        image="public/app-development.png"
       />
       <CardHome
         title="Marketing"
         desc="Pomagamy zwiększyć widoczność Twojej strony internetowej lub aplikacji, aby docierała do jak najszerszego grona użytkowników. Tworzymy strategie marketingowe ukierunkowane na rozwój popularności produktu – od działań w social media, przez kampanie reklamowe, aż po optymalizację SEO. Dzięki temu Twoja aplikacja czy strona nie tylko istnieje, ale także skutecznie zdobywa nowych odbiorców i staje się realnym narzędziem wzrostu."
-        image="src/assets/development.png"
+        image="public/development.png"
       />
       <CardHome
         title="Design"
         desc="Projektujemy nowoczesne i intuicyjne interfejsy, które wyróżniają Twoją stronę internetową lub aplikację na tle konkurencji. Dbamy o spójny UX/UI, który sprawia, że użytkownicy chętnie wracają i łatwo odnajdują to, czego potrzebują. Każdy element designu – od kolorystyki po typografię – jest starannie dopasowany, aby tworzyć profesjonalny i angażujący wizerunek Twojej marki w sieci."
-        image="src/assets/web-designing.png"
+        image="public/web-designing.png"
       />
     </div>
   </section>

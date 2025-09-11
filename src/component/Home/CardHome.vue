@@ -15,7 +15,7 @@ defineProps({
   },
   image: {
     type: String,
-    default: 'src/assets/code.png',
+    default: 'public/code.png',
   },
 })
 </script>
