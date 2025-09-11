@@ -18,7 +18,7 @@ const isActiveLink = (routePath: string): boolean => {
   <nav>
     <div class="navbar-left">
       <router-link to="/" class="logo" :class="{ 'home--active': isActiveLink('/') }">
-        <img src="/public/infortel.png" alt="Logo" width="100px" />
+        <img src="/infortel.png" alt="Logo" width="100px" />
       </router-link>
     </div>
 

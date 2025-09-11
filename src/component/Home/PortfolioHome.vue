@@ -16,7 +16,7 @@ defineProps({
 </script>
 <template>
   <div class="main">
-    <img src="/public/header-bg.jpeg" alt="" />
+    <img src="/header-bg.jpeg" alt="" />
     <div class="text">
       <h3 class="name">{{ title }}</h3>
       <p class="desc">{{ desc }}</p>
