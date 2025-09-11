@@ -12,6 +12,7 @@ import ComicReview from './ComicReview.vue'
       <ComicReview />
       <ComicReview />
       <ComicReview />
+      <ComicReview />
     </div>
   </div>
 </template>
@@ -19,24 +20,10 @@ import ComicReview from './ComicReview.vue'
 <style lang="scss" scoped>
 @use '@/colors.scss' as *;
 
-.title {
-  text-align: center;
-  font-size: 2.5vw;
-  margin-bottom: 1rem;
-}
-
-.subtitle {
-  letter-spacing: 1px;
-  text-align: center;
-  font-size: 1.3vw;
-  margin-bottom: 2rem;
-  color: #666;
-}
-
 .reviews {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem; // Space between cards
+  gap: 1rem; // Space between cards
   padding: 2rem 3rem; // Prevents touching borders: top/bottom 2rem, left/right 4rem
   justify-items: center; // Centers cards within their grid areas
   align-items: stretch; // Makes all cards same height

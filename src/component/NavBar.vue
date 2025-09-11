@@ -68,7 +68,7 @@ const isActiveLink = (routePath: string): boolean => {
   </nav>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 // Color variables (matching your theme)
 @use '@/colors.scss' as *;
 
@@ -157,65 +157,28 @@ nav {
   position: relative;
 }
 
-.btn {
-  background: transparent;
-  border: 2.5px solid $gray;
-  border-radius: 12px;
-  padding: 8px 12px;
-  font-family: $font_family;
-  font-size: 12px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  cursor: pointer;
+.btn-text {
   position: relative;
-  color: $gray;
+  z-index: 2;
+}
+
+.active-burst {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  background: $focus;
+  color: white;
+  padding: 3px 6px;
+  border: 2px solid $gray;
+  border-radius: 8px;
+  font-size: 8px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 $gray;
   box-shadow: 2px 2px 0 $gray;
-  transform: rotate(-1deg);
-
-  &:hover {
-    transform: rotate(0deg) scale(1.05);
-    background: $primarycolor;
-    color: white;
-    box-shadow: 3px 3px 0 $gray;
-    text-shadow: 1px 1px 0 rgba($gray, 0.5);
-  }
-
-  &.btn--active {
-    background: $supportcolor;
-    color: white;
-    text-shadow: 1px 1px 0 $gray;
-    transform: rotate(0deg);
-    animation: pulse 1.5s ease-in-out infinite;
-
-    .active-burst {
-      opacity: 1;
-      transform: scale(1) rotate(-15deg);
-    }
-  }
-
-  .btn-text {
-    position: relative;
-    z-index: 2;
-  }
-
-  .active-burst {
-    position: absolute;
-    top: -15px;
-    right: -10px;
-    background: $focus;
-    color: white;
-    padding: 3px 6px;
-    border: 2px solid $gray;
-    border-radius: 8px;
-    font-size: 8px;
-    font-weight: bold;
-    text-shadow: 1px 1px 0 $gray;
-    box-shadow: 2px 2px 0 $gray;
-    opacity: 0;
-    transform: scale(0.5) rotate(0deg);
-    transition: all 0.3s ease;
-    z-index: 5;
-  }
+  opacity: 0;
+  transform: scale(0.5) rotate(0deg);
+  transition: all 0.3s ease;
+  z-index: 5;
 }
 
 .contact-btn {

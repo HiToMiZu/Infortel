@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import { RouterLink } from 'vue-router'
 defineProps({
   title: {
@@ -41,9 +40,8 @@ defineProps({
 .main {
   text-decoration: none;
   color: black;
-  max-width: 300px;
-  width: 100%;
-  aspect-ratio: 0.63;
+  width: 60%;
+  aspect-ratio: 0.7;
   background-color: $background;
   box-shadow:
     8px 8px 0 $gray,
@@ -60,13 +58,10 @@ defineProps({
   transition: all 0.3s ease;
 
   img {
-    width: 100px;
+    width: 45%;
+    aspect-ratio: 1.4;
     align-self: center;
-    filter: brightness(100%) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg)
-      brightness(100%) contrast(100%);
-    transition:
-      transform 0.3s ease,
-      filter 0.3s ease;
+    transition: transform 0.3s ease;
     margin: 10px;
   }
 
@@ -75,8 +70,6 @@ defineProps({
 
     img {
       transform: scale(1.1);
-      filter: brightness(0) saturate(100%) invert(68%) sepia(12%) saturate(2470%) hue-rotate(161deg)
-        brightness(85%) contrast(84%);
     }
   }
   .text {

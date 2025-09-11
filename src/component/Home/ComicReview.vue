@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
-
 defineProps({
   customerName: {
     type: String,
@@ -104,9 +102,9 @@ const getExclamation = (rating: number) => {
     8px 8px 0 $gray,
     0 0 30px rgba($gray, 0.3);
   transform: rotate(-0.5deg);
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.4s ease;
   overflow: visible;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: $font-family;
 
   &:hover {
     transform: rotate(0deg) scale(1.03);
@@ -125,6 +123,7 @@ const getExclamation = (rating: number) => {
 
     .comic-dots {
       animation: dots-spin 3s linear infinite;
+      z-index: -1;
     }
 
     .speech-bubble {
@@ -303,6 +302,7 @@ const getExclamation = (rating: number) => {
     background-size: 10px 10px;
     opacity: 0.3;
     border-radius: 50%;
+    z-index: -1;
   }
 
   .comic-lines {

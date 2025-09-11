@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { defineProps } from 'vue'
-
 defineProps({
   title: {
     type: String,
@@ -46,6 +44,7 @@ defineProps({
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
@@ -69,32 +68,5 @@ h1.title {
   margin-top: 0;
   font-size: 3vw;
   color: white;
-}
-
-@media (min-width: 640px) {
-  /* sm: breakpoint */
-  .main {
-    padding-left: 1.5rem; /* sm:px-6 (6 * 0.25rem = 1.5rem) */
-    padding-right: 1.5rem; /* sm:px-6 */
-  }
-  .title {
-    font-size: 3rem;
-    line-height: 1;
-  }
-}
-
-@media (min-width: 1024px) {
-  /* lg: breakpoint */
-  .main {
-    padding-left: 2rem; /* lg:px-8 (8 * 0.25rem = 2rem) */
-    padding-right: 2rem; /* lg:px-8 */
-  }
-}
-
-@media (min-width: 768px) {
-  .title {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
 }
 </style>
