@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Process from '../Cards/Process.vue'
+import Process from '../Cards/ProcessComp.vue'
 </script>
 <template>
   <div class="text">

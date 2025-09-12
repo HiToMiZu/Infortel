@@ -90,8 +90,6 @@ const getExclamation = (rating: number) => {
 @use '@/colors.scss' as *;
 
 .comic-review {
-  // background: $background;
-  // border: 6px solid $gray;
   border-radius: 20px;
   padding: 25px;
   position: relative;
@@ -114,11 +112,6 @@ const getExclamation = (rating: number) => {
 
     .rating-bubble {
       animation: bounce 0.6s ease-in-out infinite alternate;
-    }
-
-    .action-burst {
-      opacity: 1;
-      transform: scale(1);
     }
 
     .comic-dots {
@@ -320,28 +313,6 @@ const getExclamation = (rating: number) => {
     );
     opacity: 0.2;
     border-radius: 10px;
-  }
-
-  .action-burst {
-    position: absolute;
-    top: -10px;
-    left: -15px;
-    background: $focus;
-    color: white;
-    padding: 8px 12px;
-    border: 3px solid $gray;
-    border-radius: 15px;
-    font-weight: bold;
-    font-size: 0.8rem;
-    text-shadow: 1px 1px 0 $gray;
-    box-shadow: 3px 3px 0 $gray;
-    transform: rotate(-15deg) scale(0);
-    opacity: 0;
-    transition: all 0.3s ease;
-
-    .burst-text {
-      display: block;
-    }
   }
 }
 

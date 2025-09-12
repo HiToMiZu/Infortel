@@ -250,24 +250,6 @@ const previousStep = () => {
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .step-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .step-number {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .process-line {
-    display: none;
-  }
-
   .detail-grid {
     grid-template-columns: 1fr;
   }

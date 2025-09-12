@@ -25,11 +25,11 @@ const isActiveLink = (routePath: string): boolean => {
     <div class="navbar-center">
       <div class="buttons">
         <button
-          @click="goPage('/service')"
-          :class="{ btn: true, 'btn--active': isActiveLink('/service') }"
+          @click="goPage('/services')"
+          :class="{ btn: true, 'btn--active': isActiveLink('/services') }"
         >
           <span class="btn-text">Services</span>
-          <div v-if="isActiveLink('/service')" class="active-burst">POW!</div>
+          <div v-if="isActiveLink('/services')" class="active-burst">POW!</div>
         </button>
         <button
           @click="goPage('/process')"
@@ -39,11 +39,11 @@ const isActiveLink = (routePath: string): boolean => {
           <div v-if="isActiveLink('/process')" class="active-burst">ZAP!</div>
         </button>
         <button
-          @click="goPage('/staff')"
+          @click="goPage('/projects')"
           :class="{ btn: true, 'btn--active': isActiveLink('/projects') }"
         >
           <span class="btn-text">Projects</span>
-          <div v-if="isActiveLink('/staff')" class="active-burst">TEAM!</div>
+          <div v-if="isActiveLink('/projects')" class="active-burst">BAM!</div>
         </button>
         <button
           @click="goPage('/reviews')"

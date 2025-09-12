@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ComicReview from '../Cards/Review.vue'
+import ComicReview from '../Cards/ReviewComp.vue'
 </script>
 
 <template>

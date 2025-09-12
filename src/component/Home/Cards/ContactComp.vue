@@ -32,29 +32,6 @@ const sendMessage = () => {
       <button type="submit" class="btn">Wyślij 🚀</button>
     </form>
   </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-top">
-      <img src="/infortel.png" alt="logo" class="logo" />
-      <nav class="footer-nav">
-        <router-link to="/">Home</router-link>
-        <router-link to="/services">Services</router-link>
-        <router-link to="/portfolio">Portfolio</router-link>
-        <router-link to="/reviews">Reviews</router-link>
-        <router-link to="/contact">Contact</router-link>
-      </nav>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="social">
-        <a href="#" target="_blank">🐦</a>
-        <a href="#" target="_blank">💼</a>
-        <a href="#" target="_blank">📷</a>
-      </div>
-      <p>© 2025 Infortel – Tworzymy produkty, które mają supermoce!</p>
-    </div>
-  </footer>
 </template>
 
 <style lang="scss" scoped>
@@ -126,81 +103,6 @@ const sendMessage = () => {
         transform: scale(1.05);
         box-shadow: 8px 8px 0 $gray;
       }
-    }
-  }
-}
-
-.footer {
-  background: $gray;
-  font-family: $font-family;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-
-  .footer-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-
-    .logo {
-      background-color: white;
-      border-radius: 10px;
-      width: 8rem;
-    }
-
-    .footer-nav {
-      display: flex;
-      gap: 1.5rem;
-
-      a {
-        color: white;
-        font-weight: bold;
-        text-decoration: none;
-        position: relative;
-
-        &:after {
-          content: '';
-          display: block;
-          width: 0%;
-          height: 2px;
-          background: $primarycolor;
-          transition: width 0.3s ease;
-          position: absolute;
-          bottom: -3px;
-          left: 0;
-        }
-
-        &:hover:after {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  .footer-bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-
-    .social {
-      display: flex;
-      gap: 1rem;
-      font-size: 1.5rem;
-
-      a {
-        transition: transform 0.3s ease;
-
-        &:hover {
-          transform: scale(1.2);
-        }
-      }
-    }
-
-    p {
-      font-size: 0.9rem;
     }
   }
 }

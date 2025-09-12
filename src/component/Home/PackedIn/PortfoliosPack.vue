@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import emblaCarouselVue from 'embla-carousel-vue'
-import PortfolioHome from '../Cards/Portfolio.vue'
+import PortfolioHome from '../Cards/PortfolioComp.vue'
 import Autoplay from 'embla-carousel-autoplay'
 
 const [emblaRef] = emblaCarouselVue({ loop: true }, [Autoplay()])
@@ -25,7 +25,6 @@ const [emblaRef] = emblaCarouselVue({ loop: true }, [Autoplay()])
 @use '@/colors.scss' as *;
 
 .slider {
-  // border: 6px solid $gray;
   border-radius: 20px;
   box-shadow:
     8px 8px 0 $gray,
@@ -37,9 +36,5 @@ const [emblaRef] = emblaCarouselVue({ loop: true }, [Autoplay()])
 }
 .embla__container {
   display: flex;
-}
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
 }
 </style>
