@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import CardHome from './CardHome.vue'
+import CardHome from '../Cards/Service.vue'
 </script>
 
 <template>

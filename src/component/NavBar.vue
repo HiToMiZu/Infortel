@@ -28,7 +28,7 @@ const isActiveLink = (routePath: string): boolean => {
           @click="goPage('/service')"
           :class="{ btn: true, 'btn--active': isActiveLink('/service') }"
         >
-          <span class="btn-text">Our Services</span>
+          <span class="btn-text">Services</span>
           <div v-if="isActiveLink('/service')" class="active-burst">POW!</div>
         </button>
         <button
@@ -40,9 +40,9 @@ const isActiveLink = (routePath: string): boolean => {
         </button>
         <button
           @click="goPage('/staff')"
-          :class="{ btn: true, 'btn--active': isActiveLink('/staff') }"
+          :class="{ btn: true, 'btn--active': isActiveLink('/projects') }"
         >
-          <span class="btn-text">Staff</span>
+          <span class="btn-text">Projects</span>
           <div v-if="isActiveLink('/staff')" class="active-burst">TEAM!</div>
         </button>
         <button

@@ -20,6 +20,7 @@ body {
 }
 .text {
   font-family: $font_family;
+  margin-bottom: 50px;
 }
 
 .title {

@@ -32,7 +32,6 @@ defineProps({
 @use '@/colors.scss' as *;
 .main {
   display: flex;
-  user-select: none;
   height: 500px;
   flex: 0 0 100%;
   min-width: 0;

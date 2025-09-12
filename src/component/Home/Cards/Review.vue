@@ -90,8 +90,8 @@ const getExclamation = (rating: number) => {
 @use '@/colors.scss' as *;
 
 .comic-review {
-  background: $background;
-  border: 6px solid $gray;
+  // background: $background;
+  // border: 6px solid $gray;
   border-radius: 20px;
   padding: 25px;
   position: relative;

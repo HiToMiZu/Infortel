@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import HeroHome from '@/component/Home/HeroHome.vue'
-import PortfoliosHome from '@/component/Home/PortfoliosHome.vue'
-import ReviewsHome from '@/component/Home/ReviewsHome.vue'
-import ServicesHome from '@/component/Home/ServicesHome.vue'
-import PrototypePortfolio from '@/component/Home/PrototypeVue.vue'
+import HeroHome from '@/component/Hero.vue'
+import PortfoliosHome from '@/component/Home/PackedIn/Portfolios.vue'
+import ReviewsHome from '@/component/Home/PackedIn/Reviews.vue'
+import ServicesHome from '@/component/Home/PackedIn/Services.vue'
+import Processes from '@/component/Home/PackedIn/Processes.vue'
+import Prototypes from '@/component/Home/Prototypes.vue'
 </script>
 
 <template>
@@ -13,9 +14,10 @@ import PrototypePortfolio from '@/component/Home/PrototypeVue.vue'
     class="main-content"
   />
   <ServicesHome />
+  <Processes />
   <ReviewsHome />
   <PortfoliosHome />
-  <PrototypePortfolio />
+  <Prototypes />
 </template>
 
 <style scoped lang="scss">

@@ -42,11 +42,9 @@ defineProps({
   color: black;
   width: 60%;
   aspect-ratio: 0.7;
-  background-color: $background;
   box-shadow:
     8px 8px 0 $gray,
     0 0 30px rgba($gray, 0.3);
-  border: 6px solid $gray;
   border-radius: 20px;
   padding: 1rem;
   transition: box-shadow 0.3s ease;
@@ -56,10 +54,11 @@ defineProps({
   justify-content: space-between;
   position: relative;
   transition: all 0.3s ease;
+  will-change: transform;
 
   img {
-    width: 45%;
-    aspect-ratio: 1.4;
+    width: 8rem;
+    aspect-ratio: 1;
     align-self: center;
     transition: transform 0.3s ease;
     margin: 10px;
