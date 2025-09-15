@@ -95,6 +95,7 @@ const getExclamation = (rating: number) => {
   position: relative;
   min-height: 300px;
   max-width: 400px;
+  min-width: 200px;
   margin: 20px;
   box-shadow:
     8px 8px 0 $gray,

@@ -15,10 +15,10 @@ defineProps({
   <section class="root">
     <div class="main">
       <div class="text">
-        <h1 class="title">
+        <h1 class="title-hero">
           {{ title }}
         </h1>
-        <p class="subtitle">
+        <p class="subtitle-hero">
           {{ subtitle }}
         </p>
       </div>
@@ -55,16 +55,18 @@ defineProps({
   text-shadow: 4px 4px #2e2e2e;
 }
 
-h1.title {
-  font-size: 8vw;
+h1.title-hero {
+  font-size: clamp(80px, 8vw, 8vw);
   font-weight: 800;
   color: white;
+  margin-bottom: 20px;
 }
 
-.subtitle {
+.subtitle-hero {
   width: 50vw;
   margin-top: 0;
-  font-size: 3vw;
+  font-size: clamp(20px, 3vw, 3vw);
+  margin: 0 auto;
   color: white;
 }
 </style>

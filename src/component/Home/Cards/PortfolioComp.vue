@@ -31,29 +31,38 @@ defineProps({
 <style lang="scss" scoped>
 @use '@/colors.scss' as *;
 .main {
+  // Use flexbox with wrap and minimum widths
   display: flex;
-  height: 500px;
+  flex-wrap: wrap;
   flex: 0 0 100%;
   min-width: 0;
+  container-type: inline-size; // Enable container queries if supported
 
   img {
-    height: 460px;
+    max-height: clamp(100px, 160px, 460px);
     margin: 20px;
     outline: 6px solid $gray;
     border-radius: 20px;
   }
+  .text {
+    margin: 0 auto;
+  }
+
   .name {
     text-align: center;
-    font-size: 2.5vw;
+    font-size: clamp(30px, 1.3vw, 1.3vw);
     margin-top: 10px;
   }
   .desc {
     letter-spacing: 1px;
-    font-size: 1.3vw;
+    font-size: clamp(14px, 1.3vw, 1.3vw);
     margin-bottom: 2rem;
+    text-align: center;
     color: #666;
   }
   .tech {
+    font-size: clamp(14px, 1.3vw, 1.3vw);
+    text-align: center;
     color: #666;
   }
   .link {

@@ -25,14 +25,14 @@ body {
 
 .title {
   text-align: center;
-  font-size: 2.5vw;
+  font-size: clamp(40px, 2.5vw, 3vw);
   margin-bottom: 1rem;
 }
 
 .subtitle {
   letter-spacing: 1px;
   text-align: center;
-  font-size: 1.3vw;
+  font-size: clamp(25px, 1.3vw, 1.8vw);
   margin-bottom: 2rem;
   color: #666;
 }

@@ -13,7 +13,11 @@ const [emblaRef] = emblaCarouselVue({ loop: true }, [Autoplay()])
   </div>
   <section class="slider" ref="emblaRef">
     <div class="embla__container">
-      <PortfolioHome />
+      <PortfolioHome
+        title="Minecraft Portfolio Manager"
+        desc="aplikacja inspirowana stylem menu gry Minecraft, stworzona do zarządzania i prezentacji projektów programistycznych w przejrzysty i interaktywny sposób."
+        tech="Native HTML CSS AND JS"
+      />
       <PortfolioHome />
       <PortfolioHome />
       <PortfolioHome />

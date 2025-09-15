@@ -39,11 +39,8 @@ import CardHome from '../Cards/ServiceComp.vue'
 
   .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-    gap: 0; // No gap - cards touching each other
-    padding: 2rem 8rem; // Large side margins to keep them away from edges
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
     justify-items: center;
-    align-items: stretch;
   }
 }
 </style>

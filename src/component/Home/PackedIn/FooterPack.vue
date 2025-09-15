@@ -38,6 +38,7 @@ import Contact from '../Cards/ContactComp.vue'
   color: white;
   padding: 2rem 1rem;
   text-align: center;
+  overflow: hidden;
 
   .footer-top {
     display: flex;
@@ -62,6 +63,7 @@ import Contact from '../Cards/ContactComp.vue'
         font-weight: bold;
         text-decoration: none;
         position: relative;
+        font-size: clamp(10px, 1vw, 1vw);
 
         &:after {
           content: '';

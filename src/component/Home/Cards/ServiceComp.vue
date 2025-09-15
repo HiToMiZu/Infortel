@@ -40,13 +40,14 @@ defineProps({
 .main {
   text-decoration: none;
   color: black;
-  width: 60%;
-  aspect-ratio: 0.7;
+  width: 80%;
+  max-width: 400px;
   box-shadow:
     8px 8px 0 $gray,
     0 0 30px rgba($gray, 0.3);
   border-radius: 20px;
   padding: 1rem;
+  margin: 20px 0;
   transition: box-shadow 0.3s ease;
   overflow: hidden;
   display: flex;
@@ -57,7 +58,8 @@ defineProps({
   will-change: transform;
 
   img {
-    width: 8rem;
+    width: 5vw;
+    min-width: 100px;
     aspect-ratio: 1;
     align-self: center;
     transition: transform 0.3s ease;
@@ -77,26 +79,27 @@ defineProps({
     align-items: center; // centers all children
     text-align: center; // centers text as well
     margin: auto 0;
+    height: 100%;
   }
 
   .project-badge {
-    max-width: 100px;
+    max-width: clamp(100px, 150px, 200px);
     width: 100%;
+    max-height: 50px;
     background: $supportcolor;
     color: white;
     padding: 8px 15px;
     border-radius: 20px;
     border: 3px solid $gray;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: clamp(12px, 0.7vw, 1vw);
     text-shadow: 1px 1px 0 rgba($gray, 0.5);
     box-shadow: 3px 3px 0 $gray;
   }
 
   p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    flex-grow: 1; // This will make the paragraph take up available space
+    font-size: clamp(14px, 0.8vw, 1vw);
+    text-align: center;
   }
 
   .link {
