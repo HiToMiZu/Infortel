@@ -27,6 +27,7 @@ defineProps({
 </template>
 
 <style lang="scss" scoped>
+@use '@/colors.scss' as *;
 .root {
   display: flex;
   align-items: center;
