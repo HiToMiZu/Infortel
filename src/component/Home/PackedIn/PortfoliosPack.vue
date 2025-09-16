@@ -42,19 +42,9 @@ const [emblaRef] = emblaCarouselVue(
 @use '@/colors.scss' as *;
 
 .portfolio-section {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 3rem;
-
-  @media (min-width: 768px) {
-    padding: 2rem;
-    margin-bottom: 4rem;
-  }
-
-  @media (min-width: 1024px) {
-    padding: 3rem;
-    margin-bottom: 5rem;
-  }
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 .text {
@@ -79,9 +69,6 @@ const [emblaRef] = emblaCarouselVue(
   box-shadow:
     4px 4px 0 $gray,
     0 0 20px rgba($gray, 0.2);
-  margin: 0 auto;
-  width: 100%;
-  max-width: 95%;
   overflow: hidden;
 
   @media (min-width: 480px) {
@@ -89,22 +76,12 @@ const [emblaRef] = emblaCarouselVue(
     box-shadow:
       6px 6px 0 $gray,
       0 0 25px rgba($gray, 0.25);
-    max-width: 90%;
   }
 
   @media (min-width: 768px) {
     box-shadow:
       8px 8px 0 $gray,
       0 0 30px rgba($gray, 0.3);
-    max-width: 85%;
-  }
-
-  @media (min-width: 1024px) {
-    max-width: 80%;
-  }
-
-  @media (min-width: 1200px) {
-    max-width: 75%;
   }
 }
 
