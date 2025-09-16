@@ -3,42 +3,132 @@ import emblaCarouselVue from 'embla-carousel-vue'
 import PortfolioHome from '../Cards/PortfolioComp.vue'
 import Autoplay from 'embla-carousel-autoplay'
 
-const [emblaRef] = emblaCarouselVue({ loop: true }, [Autoplay()])
+const [emblaRef] = emblaCarouselVue(
+  {
+    loop: true,
+    align: 'start',
+    slidesToScroll: 1,
+    breakpoints: {
+      '(min-width: 768px)': { slidesToScroll: 1 },
+      '(min-width: 1024px)': { slidesToScroll: 1 },
+    },
+  },
+  [Autoplay({ delay: 4000 })],
+)
 </script>
 
 <template>
-  <div class="text">
-    <h2 class="title">Nasze projekty!</h2>
-    <p class="subtitle">Twój też tu może być!</p>
-  </div>
-  <section class="slider" ref="emblaRef">
-    <div class="embla__container">
-      <PortfolioHome
-        title="Minecraft Portfolio Manager"
-        desc="aplikacja inspirowana stylem menu gry Minecraft, stworzona do zarządzania i prezentacji projektów programistycznych w przejrzysty i interaktywny sposób."
-        tech="Native HTML CSS AND JS"
-      />
-      <PortfolioHome />
-      <PortfolioHome />
-      <PortfolioHome />
+  <div class="portfolio-section">
+    <div class="text">
+      <h2 class="title">Nasze projekty!</h2>
+      <p class="subtitle">Twój też tu może być!</p>
     </div>
-  </section>
+    <section class="slider" ref="emblaRef">
+      <div class="embla__container">
+        <PortfolioHome
+          title="Minecraft Portfolio Manager"
+          desc="aplikacja inspirowana stylem menu gry Minecraft, stworzona do zarządzania i prezentacji projektów programistycznych w przejrzysty i interaktywny sposób."
+          tech="Native HTML CSS AND JS"
+        />
+        <PortfolioHome />
+        <PortfolioHome />
+        <PortfolioHome />
+      </div>
+    </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 @use '@/colors.scss' as *;
 
-.slider {
-  border-radius: 20px;
-  box-shadow:
-    8px 8px 0 $gray,
-    0 0 30px rgba($gray, 0.3);
-  margin: 4rem auto;
-  width: 80%;
-  overflow: hidden;
-  height: 100%;
+.portfolio-section {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 3rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 3rem;
+    margin-bottom: 5rem;
+  }
 }
+
+.text {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  .subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: #666;
+    margin: 0;
+  }
+}
+
+.slider {
+  border-radius: 15px;
+  box-shadow:
+    4px 4px 0 $gray,
+    0 0 20px rgba($gray, 0.2);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 95%;
+  overflow: hidden;
+
+  @media (min-width: 480px) {
+    border-radius: 20px;
+    box-shadow:
+      6px 6px 0 $gray,
+      0 0 25px rgba($gray, 0.25);
+    max-width: 90%;
+  }
+
+  @media (min-width: 768px) {
+    box-shadow:
+      8px 8px 0 $gray,
+      0 0 30px rgba($gray, 0.3);
+    max-width: 85%;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 80%;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 75%;
+  }
+}
+
 .embla__container {
   display: flex;
+  touch-action: pan-y;
+}
+
+// Mobile-first responsive adjustments
+@media (max-width: 479px) {
+  .portfolio-section {
+    padding: 0.5rem;
+  }
+
+  .text {
+    margin-bottom: 1rem;
+  }
+
+  .slider {
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow:
+      2px 2px 0 $gray,
+      0 0 15px rgba($gray, 0.15);
+  }
 }
 </style>

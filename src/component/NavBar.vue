@@ -170,7 +170,6 @@ nav {
   z-index: 200;
 
   &:hover {
-    transform: scale(1.05);
     box-shadow: 4px 4px 0 $gray;
   }
 
@@ -185,13 +184,14 @@ nav {
 
   &.is-open {
     .hamburger-line:nth-child(1) {
-      transform: rotate(45deg) translateY(6px);
+      transform: rotate(45deg) translate(0px, 6px);
     }
     .hamburger-line:nth-child(2) {
       opacity: 0;
+      transform: translateX(0);
     }
     .hamburger-line:nth-child(3) {
-      transform: rotate(-45deg) translateY(-6px);
+      transform: rotate(-45deg) translate(0px, -6px);
     }
   }
 }
@@ -235,7 +235,7 @@ nav {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.3s ease;
     position: relative;
     color: $gray;
     transform: rotate(-0.5deg);
@@ -286,7 +286,7 @@ nav {
     border-radius: 15px;
     padding: 8px;
     box-shadow: 4px 4px 0 $gray;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.3s ease;
     position: relative;
     display: flex;
     align-items: center;
@@ -402,9 +402,6 @@ nav {
 
   .navbar-left {
     justify-content: flex-start;
-  }
-  .contact-btn {
-    height: 60px;
   }
 }
 
