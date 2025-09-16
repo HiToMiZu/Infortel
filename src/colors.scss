@@ -1,6 +1,20 @@
+// Variables
 $background: #eeeeee;
 $primarycolor: #1cace4;
 $supportcolor: #41a4cb;
 $gray: #5c6474;
 $focus: #3c8c90;
-$font_family: 'Comic Sans MS', cursive, sans-serif;
+$font_family: 'Comic Sans MS';
+
+// Font face definition
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('/comic-sans-ms/comici.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Apply globally
+body {
+  font-family: $font_family, sans-serif;
+}

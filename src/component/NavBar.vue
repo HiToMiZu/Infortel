@@ -135,8 +135,6 @@ const toggleMobileMenu = (): void => {
 </template>
 
 <style lang="scss" scoped>
-@use '@/colors.scss' as *;
-
 nav {
   display: flex;
   align-items: center;

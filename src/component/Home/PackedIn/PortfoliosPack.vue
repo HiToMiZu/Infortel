@@ -40,7 +40,6 @@ const [emblaRef] = emblaCarouselVue(
 
 <style lang="scss" scoped>
 @use '@/colors.scss' as *;
-
 .portfolio-section {
   width: 90vw;
   margin: 0 auto;
