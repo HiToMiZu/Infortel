@@ -39,28 +39,10 @@ const [emblaRef] = emblaCarouselVue(
 </template>
 
 <style lang="scss" scoped>
-@use '@/colors.scss' as *;
 .portfolio-section {
-  width: 90vw;
+  width: 70vw;
   margin: 0 auto;
   margin-bottom: 100px;
-}
-
-.text {
-  text-align: center;
-  margin-bottom: 2rem;
-
-  .title {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
-
-  .subtitle {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    color: #666;
-    margin: 0;
-  }
 }
 
 .slider {
@@ -93,6 +75,7 @@ const [emblaRef] = emblaCarouselVue(
 @media (max-width: 479px) {
   .portfolio-section {
     padding: 0.5rem;
+    width: 90vw;
   }
 
   .text {

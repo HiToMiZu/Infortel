@@ -29,14 +29,13 @@ defineProps({
       </div>
       <p>{{ desc }}</p>
     </div>
-    <router-link class="link" to="/service">
+    <router-link class="link" to="/services">
       <button class="btn">{{ button }}</button>
     </router-link>
   </section>
 </template>
 
 <style lang="scss" scoped>
-@use '@/colors.scss' as *;
 .main {
   text-decoration: none;
   color: black;
@@ -56,9 +55,13 @@ defineProps({
   position: relative;
   transition: all 0.3s ease;
   will-change: transform;
-
+  @media (max-width: 390px) {
+    width: 80vw;
+    margin: 20px 3vw;
+  }
   img {
     width: 5vw;
+    will-change: transform;
     min-width: 100px;
     aspect-ratio: 1;
     align-self: center;
@@ -120,6 +123,9 @@ defineProps({
     z-index: 1;
     background-color: white;
     transition: all 0.3s ease; // Add transition for smooth shadow change
+    height: 40px;
+    width: 160px;
+    font-size: 0.875rem;
 
     &:hover {
       background-color: $primarycolor;

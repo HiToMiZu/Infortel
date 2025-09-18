@@ -135,15 +135,13 @@ const toggleMobileMenu = (): void => {
 </template>
 
 <style lang="scss" scoped>
-@use '@/colors.scss' as *;
-
 nav {
   display: flex;
   align-items: center;
   padding: 0 20px;
   height: 58px;
   position: sticky;
-  top: 8px;
+  top: 16px;
   z-index: 100;
   background: transparent;
   transition: all 0.3s ease;
@@ -159,6 +157,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-self: flex-end;
   width: 40px;
   height: 40px;
   background: white;
@@ -181,19 +180,6 @@ nav {
     transition: all 0.3s ease;
     transform-origin: center;
   }
-
-  &.is-open {
-    .hamburger-line:nth-child(1) {
-      transform: rotate(45deg) translate(0px, 6px);
-    }
-    .hamburger-line:nth-child(2) {
-      opacity: 0;
-      transform: translateX(0);
-    }
-    .hamburger-line:nth-child(3) {
-      transform: rotate(-45deg) translate(0px, -6px);
-    }
-  }
 }
 
 // Mobile menu overlay
@@ -203,7 +189,6 @@ nav {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
@@ -227,6 +212,7 @@ nav {
   }
 
   .mobile-btn {
+    font-family: $font-family;
     padding: 15px 30px;
     background: white;
     border: 3px solid $gray;
@@ -258,6 +244,7 @@ nav {
       color: white;
       text-shadow: 1px 1px 0 $gray;
       transform: rotate(1deg);
+      height: 60px;
 
       &:hover {
         background: $focus;

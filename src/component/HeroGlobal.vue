@@ -1,13 +1,9 @@
 <script lang="ts" setup>
 defineProps({
-  title: {
-    type: String,
-    default: 'TITLE',
-  },
-  subtitle: {
-    type: String,
-    default: 'SUBTITLE',
-  },
+  title: { type: String, default: 'TITLE' },
+  subtitle: { type: String, default: 'SUBTITLE' },
+  titleSize: { type: String, default: 'clamp(80px, 8vw, 8vw)' },
+  subtitleSize: { type: String, default: 'clamp(20px, 3vw, 3vw)' },
 })
 </script>
 
@@ -15,10 +11,10 @@ defineProps({
   <section class="root">
     <div class="main">
       <div class="text">
-        <h1 class="title-hero">
+        <h1 class="title-hero" :style="{ fontSize: titleSize }">
           {{ title }}
         </h1>
-        <p class="subtitle-hero">
+        <p class="subtitle-hero" :style="{ fontSize: subtitleSize }">
           {{ subtitle }}
         </p>
       </div>
@@ -27,13 +23,12 @@ defineProps({
 </template>
 
 <style lang="scss" scoped>
-@use '@/colors.scss' as *;
 .root {
   display: flex;
   align-items: center;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/header-bg.jpeg');
   background-size: cover;
-  height: 93vh;
+  height: 96vh;
 }
 .main {
   max-width: 80rem;
@@ -56,7 +51,6 @@ defineProps({
 }
 
 h1.title-hero {
-  font-size: clamp(80px, 8vw, 8vw);
   font-weight: 800;
   color: white;
   margin-bottom: 20px;
@@ -65,7 +59,6 @@ h1.title-hero {
 .subtitle-hero {
   width: 50vw;
   margin-top: 0;
-  font-size: clamp(20px, 3vw, 3vw);
   margin: 0 auto;
   color: white;
 }

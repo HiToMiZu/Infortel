@@ -156,13 +156,12 @@ const previousStep = () => {
 </template>
 
 <style lang="scss" scoped>
-@use '@/colors.scss' as *;
 .superhero-process {
   font-family: $font-family;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -226,6 +225,11 @@ const previousStep = () => {
   justify-content: center;
   gap: 20px;
   margin-top: 40px;
+}
+.btn {
+  height: 40px;
+  width: 160px;
+  font-size: 0.875rem;
 }
 
 @keyframes slideInDown {

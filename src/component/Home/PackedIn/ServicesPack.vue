@@ -41,6 +41,9 @@ import CardHome from '../Cards/ServiceComp.vue'
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, auto));
     justify-items: center;
+    @media (max-width: 390px) {
+      justify-items: flex-start;
+    }
   }
 }
 </style>

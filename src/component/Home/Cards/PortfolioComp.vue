@@ -10,20 +10,24 @@ defineProps({
   },
   tech: {
     type: String,
-    default: `What we've used:`,
+    default: `Vue, Django`,
+  },
+  image: {
+    type: String,
+    default: '/header-bg.jpeg',
   },
 })
 </script>
 <template>
   <div class="main">
     <div class="image-container">
-      <img src="/header-bg.jpeg" alt="Project preview" />
+      <img :src="image" alt="Project preview" />
     </div>
     <div class="content">
       <div class="text">
         <h3 class="name">{{ title }}</h3>
         <p class="desc">{{ desc }}</p>
-        <p class="tech">{{ tech }}</p>
+        <p class="tech">What we've used: {{ tech }}</p>
       </div>
       <router-link class="link" to="/projects">
         <button class="btn">Get to know more</button>
@@ -33,8 +37,6 @@ defineProps({
 </template>
 
 <style lang="scss" scoped>
-@use '@/colors.scss' as *;
-
 .main {
   display: flex;
   flex-direction: column;
@@ -164,8 +166,8 @@ defineProps({
     transition: all 0.3s ease;
     height: 36px;
     width: 120px;
-    border-radius: 8px;
     font-size: 0.875rem;
+    border-radius: 8px;
     font-weight: 500;
     cursor: pointer;
 

@@ -87,8 +87,6 @@ const getExclamation = (rating: number) => {
 
 <style lang="scss" scoped>
 // Color variables
-@use '@/colors.scss' as *;
-
 .comic-review {
   border-radius: 20px;
   padding: 25px;

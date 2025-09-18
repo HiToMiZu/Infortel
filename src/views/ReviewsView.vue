@@ -1,22 +1,16 @@
 <script setup lang="ts">
 import HeroHome from '@/component/HeroGlobal.vue'
-import PortfoliosHome from '@/component/Home/PackedIn/PortfoliosPack.vue'
-import ReviewsHome from '@/component/Home/PackedIn/ReviewsPack.vue'
-import ServicesHome from '@/component/Home/PackedIn/ServicesPack.vue'
-import Processes from '@/component/Home/PackedIn/ProcessesPack.vue'
 import FooterGlobal from '@/component/FooterGlobal.vue'
 </script>
 
 <template>
   <HeroHome
-    title="Infortel"
-    subtitle="Od linii kodu po pełną historię tworzymy Twój cyfrowy komiks."
+    title="Głosy naszych klientów mówią same za siebie."
+    subtitle="Zaufanie buduje się poprzez jakość i rezultaty. Oto, co mówią ci, którzy już z nami współpracowali."
+    title-size="clamp(30px, 3vw, 3vw)"
+    subtitle-size="clamp(8px, 1vw, 1vw)"
     class="main-content"
   />
-  <ServicesHome />
-  <Processes />
-  <ReviewsHome />
-  <PortfoliosHome />
   <FooterGlobal />
 </template>
 
