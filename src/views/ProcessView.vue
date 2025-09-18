@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import HeroHome from '@/component/HeroGlobal.vue'
 import FooterGlobal from '@/component/FooterGlobal.vue'
+import ProcessesPack from '@/component/Home/PackedIn/ProcessesPack.vue'
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import FooterGlobal from '@/component/FooterGlobal.vue'
     subtitle-size="clamp(8px, 1vw, 1vw)"
     class="main-content"
   />
+  <ProcessesPack />
   <FooterGlobal />
 </template>
 
