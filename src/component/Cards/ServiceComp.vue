@@ -55,7 +55,7 @@ defineProps({
   position: relative;
   transition: all 0.3s ease;
   will-change: transform;
-  @media (max-width: 390px) {
+  @media (max-width: 500px) {
     width: 80vw;
     margin: 20px 3vw;
   }

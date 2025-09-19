@@ -3,8 +3,7 @@ defineProps({
   title: { type: String, default: 'Masz pomysł? Porozmawiajmy!' },
   subtitle: {
     type: String,
-    default:
-      'Bądź na bieżąco lub napisz do nas – wspólnie znajdziemy najlepsze rozwiązanie dla Twojego projektu.',
+    default: 'Napisz do nas – wspólnie stworzymy coś wyjątkowego.',
   },
 })
 import { ref } from 'vue'
@@ -55,11 +54,11 @@ const sendMessage = () => {
     </div>
 
     <div class="footer-bottom">
-      <div class="social">
+      <!-- <div class="social">
         <a href="#" target="_blank">🐦</a>
         <a href="#" target="_blank">💼</a>
         <a href="#" target="_blank">📷</a>
-      </div>
+      </div> -->
       <p>© 2025 Infortel – Tworzymy produkty, które mają supermoce!</p>
     </div>
   </footer>

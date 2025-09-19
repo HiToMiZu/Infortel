@@ -103,6 +103,17 @@ const getExclamation = (rating: number) => {
   overflow: visible;
   font-family: $font-family;
 
+  @media (max-width: 1400px) {
+    .rating-bubble {
+      animation: bounce 0.6s ease-in-out infinite alternate;
+    }
+
+    .comic-dots {
+      animation: dots-spin 3s linear infinite;
+      z-index: -1;
+    }
+  }
+
   &:hover {
     transform: rotate(0deg) scale(1.03);
     box-shadow:
@@ -337,7 +348,6 @@ const getExclamation = (rating: number) => {
 // Responsive design
 @media (max-width: 768px) {
   .comic-review {
-    max-width: 100%;
     margin: 15px 0;
     min-height: 280px;
 

@@ -11,7 +11,7 @@ import FooterGlobal from '@/component/FooterGlobal.vue'
     subtitle-size="clamp(8px, 1vw, 1vw)"
     class="main-content"
   />
-  <FooterGlobal />
+  <FooterGlobal title="Wyślij wiadomość" />
 </template>
 
 <style scoped lang="scss">

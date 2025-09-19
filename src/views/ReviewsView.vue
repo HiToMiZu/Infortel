@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import HeroHome from '@/component/HeroGlobal.vue'
 import FooterGlobal from '@/component/FooterGlobal.vue'
-import ReviewsPack from '@/component/Home/PackedIn/ReviewsPack.vue'
+import ReviewsPack from '@/component/PackedIn/ReviewsPack.vue'
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import ReviewsPack from '@/component/Home/PackedIn/ReviewsPack.vue'
     class="main-content"
   />
   <ReviewsPack />
-  <FooterGlobal />
+  <FooterGlobal title="Dołącz do grona zadowolonych klientów" />
 </template>
 
 <style scoped lang="scss">

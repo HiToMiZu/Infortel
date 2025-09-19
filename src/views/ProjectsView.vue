@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import HeroHome from '@/component/HeroGlobal.vue'
 import FooterGlobal from '@/component/FooterGlobal.vue'
-import PortfoliosPack from '@/component/Home/PackedIn/PortfoliosPack.vue'
+import PortfoliosPack from '@/component/PackedIn/PortfoliosPack.vue'
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import PortfoliosPack from '@/component/Home/PackedIn/PortfoliosPack.vue'
     class="main-content"
   />
   <PortfoliosPack />
-  <FooterGlobal />
+  <FooterGlobal title="Zobacz wszystkie realizacje" />
 </template>
 
 <style scoped lang="scss">

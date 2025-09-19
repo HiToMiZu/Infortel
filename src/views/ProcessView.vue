@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import HeroHome from '@/component/HeroGlobal.vue'
 import FooterGlobal from '@/component/FooterGlobal.vue'
-import ProcessesPack from '@/component/Home/PackedIn/ProcessesPack.vue'
+import ProcessesPack from '@/component/PackedIn/ProcessesPack.vue'
+import BenefitsPack from '@/component/PackedIn/BenefitsPack.vue'
 </script>
 
 <template>
@@ -13,7 +14,8 @@ import ProcessesPack from '@/component/Home/PackedIn/ProcessesPack.vue'
     class="main-content"
   />
   <ProcessesPack />
-  <FooterGlobal />
+  <BenefitsPack />
+  <FooterGlobal title="Masz pomysł? Zacznijmy od rozmowy." />
 </template>
 
 <style scoped lang="scss">

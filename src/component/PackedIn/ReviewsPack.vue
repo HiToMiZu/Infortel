@@ -20,10 +20,16 @@ import ComicReview from '../Cards/ReviewComp.vue'
 <style lang="scss" scoped>
 .reviews {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
   gap: 1rem; // Space between cards
   padding: 2rem 3rem; // Prevents touching borders: top/bottom 2rem, left/right 4rem
   justify-items: center; // Centers cards within their grid areas
   align-items: stretch; // Makes all cards same height
+  @media (max-width: 1400px) {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+  }
 }
 </style>

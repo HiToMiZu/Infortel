@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import HeroHome from '@/component/HeroGlobal.vue'
-import PortfoliosHome from '@/component/Home/PackedIn/PortfoliosPack.vue'
-import ReviewsHome from '@/component/Home/PackedIn/ReviewsPack.vue'
-import ServicesHome from '@/component/Home/PackedIn/ServicesPack.vue'
-import Processes from '@/component/Home/PackedIn/ProcessesPack.vue'
+import PortfoliosHome from '@/component/PackedIn/PortfoliosPack.vue'
+import ReviewsHome from '@/component/PackedIn/ReviewsPack.vue'
+import ServicesHome from '@/component/PackedIn/ServicesPack.vue'
+import Processes from '@/component/PackedIn/ProcessesPack.vue'
 import FooterGlobal from '@/component/FooterGlobal.vue'
 </script>
 

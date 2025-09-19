@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import HeroHome from '@/component/HeroGlobal.vue'
-import ServicesHome from '@/component/Home/PackedIn/ServicesPack.vue'
+import ServicesHome from '@/component/PackedIn/ServicesPack.vue'
 import FooterGlobal from '@/component/FooterGlobal.vue'
-import WhyComp from '@/component/Services/WhyComp.vue'
+import WhyComp from '@/component/PackedIn/WhyPack.vue'
 </script>
 
 <template>
@@ -15,10 +15,7 @@ import WhyComp from '@/component/Services/WhyComp.vue'
   />
   <ServicesHome />
   <WhyComp />
-  <FooterGlobal
-    title="Gotowy, aby zacząć swój projekt?"
-    subtitle="Napisz do nas – wspólnie stworzymy coś wyjątkowego."
-  />
+  <FooterGlobal title="Gotowy, aby zacząć swój projekt?" />
 </template>
 
 <style scoped lang="scss">
