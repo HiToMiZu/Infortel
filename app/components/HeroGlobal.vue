@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 defineProps({
-  title: { type: String, default: 'TITLE' },
-  subtitle: { type: String, default: 'SUBTITLE' },
-  titleSize: { type: String, default: 'clamp(80px, 8vw, 8vw)' },
-  subtitleSize: { type: String, default: 'clamp(20px, 3vw, 3vw)' },
-})
+  title: { type: String, default: "TITLE" },
+  subtitle: { type: String, default: "SUBTITLE" },
+  titleSize: { type: String, default: "clamp(80px, 8vw, 8vw)" },
+  subtitleSize: { type: String, default: "clamp(20px, 3vw, 3vw)" },
+});
 </script>
 
 <template>
@@ -26,7 +26,7 @@ defineProps({
 .root {
   display: flex;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/header-bg.jpeg');
+  background: url("/header-bg.jpeg");
   background-size: cover;
   height: 96vh;
 }

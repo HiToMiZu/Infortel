@@ -6,50 +6,49 @@ const company = ref({
   address: "ul. Zastawa 18, 17-230 Białowieża",
   phone: "+48 799 123 433",
   emailMZ: "MAREK@INFORTEL.PL",
-  emailIZ:"IREK@INFORTEL.PL",
+  emailIZ: "IREK@INFORTEL.PL",
   emailKG: "KG@INFORTEL.PL",
-  hours: "Mon-Fri: 9:00 AM - 6:00 PM"
-})
+  hours: "Mon-Fri: 9:00 AM - 6:00 PM",
+});
 
 // Generate embed URL (no API key required for basic embed)
 const embedUrl = computed(() => {
-  const baseUrl = "https://www.google.com/maps/embed"
-  const query = encodeURIComponent(company.value.address)
-  return `${baseUrl}?pb=!1m18!1m12!1m3!1d3024.1234567890!2d-122.0840904!3d37.4220936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s${query}!5e${0}!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus`
-})
-
+  const baseUrl = "https://www.google.com/maps/embed";
+  const query = encodeURIComponent(company.value.address);
+  return `${baseUrl}?pb=!1m18!1m12!1m3!1d3024.1234567890!2d-122.0840904!3d37.4220936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s${query}!5e${0}!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus`;
+});
 
 // Directions URL
 const directionsUrl = computed(() => {
-  const query = encodeURIComponent(company.value.address)
-  return `https://www.google.com/maps/dir/?api=1&destination=${query}`
-})
+  const query = encodeURIComponent(company.value.address);
+  return `https://www.google.com/maps/dir/?api=1&destination=${query}`;
+});
 
 // Share location function
 const shareLocation = async () => {
   const shareData = {
     title: `${company.value.name} Location`,
     text: `Visit us at: ${company.value.address}`,
-    url: directionsUrl.value
-  }
+    url: directionsUrl.value,
+  };
 
   if (navigator.share) {
     try {
-      await navigator.share(shareData)
+      await navigator.share(shareData);
     } catch (err) {
-      console.log('Error sharing:', err)
-      fallbackShare()
+      console.log("Error sharing:", err);
+      fallbackShare();
     }
   } else {
-    fallbackShare()
+    fallbackShare();
   }
-}
+};
 
 const fallbackShare = () => {
-  navigator.clipboard.writeText(directionsUrl.value)
+  navigator.clipboard.writeText(directionsUrl.value);
   // You could show a toast notification here
-  alert('Location link copied to clipboard!')
-}
+  alert("Location link copied to clipboard!");
+};
 </script>
 
 <template>
@@ -69,7 +68,7 @@ const fallbackShare = () => {
           :src="embedUrl"
           width="100%"
           height="400"
-          style="border:0;"
+          style="border: 0"
           allowfullscreen
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -84,32 +83,40 @@ const fallbackShare = () => {
             <Icon name="mdi:phone" class="info-icon" />
             <div>
               <h4>Telefon</h4>
-              <a :href="`tel:${company.phone}`" class="contact-link">{{ company.phone }}</a>
+              <a :href="`tel:${company.phone}`" class="contact-link">{{
+                company.phone
+              }}</a>
             </div>
           </div>
-          
+
           <div class="info-item">
             <Icon name="mdi:email" class="info-icon" />
             <div>
               <h4>Email - Marek</h4>
-              <a :href="`mailto:${company.emailMZ}`" class="contact-link">{{ company.emailMZ }}</a>
+              <a :href="`mailto:${company.emailMZ}`" class="contact-link">{{
+                company.emailMZ
+              }}</a>
             </div>
           </div>
-           <div class="info-item">
+          <div class="info-item">
             <Icon name="mdi:email" class="info-icon" />
             <div>
               <h4>Email - Irek</h4>
-              <a :href="`mailto:${company.emailIZ}`" class="contact-link">{{ company.emailIZ }}</a>
+              <a :href="`mailto:${company.emailIZ}`" class="contact-link">{{
+                company.emailIZ
+              }}</a>
             </div>
           </div>
-           <div class="info-item">
+          <div class="info-item">
             <Icon name="mdi:email" class="info-icon" />
             <div>
               <h4>Email - Księgowość</h4>
-              <a :href="`mailto:${company.emailKG}`" class="contact-link">{{ company.emailKG }}</a>
+              <a :href="`mailto:${company.emailKG}`" class="contact-link">{{
+                company.emailKG
+              }}</a>
             </div>
           </div>
-          
+
           <div class="info-item">
             <Icon name="mdi:clock" class="info-icon" />
             <div>
@@ -123,12 +130,11 @@ const fallbackShare = () => {
         <div class="action-buttons">
           <NuxtLink to="">
             <button class="btn">
-            <Icon name="mdi:directions" />
-            Directions
+              <Icon name="mdi:directions" />
+              Directions
             </button>
           </NuxtLink>
 
-          
           <button @click="shareLocation" class="btn">
             <Icon name="mdi:share" />
             Share Location
@@ -139,19 +145,20 @@ const fallbackShare = () => {
   </div>
 </template>
 
-
-
 <style lang="scss" scoped>
 .company-location {
   max-width: 1600px;
   margin: 50px auto;
   padding: 1rem;
+  border-radius: 20px;
 }
 
 .location-card {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    8px 8px 0 $gray,
+    0 0 30px rgba($gray, 0.3);
   overflow: hidden;
 }
 
@@ -256,19 +263,19 @@ const fallbackShare = () => {
   .company-location {
     padding: 0.5rem;
   }
-  
+
   .location-header {
     padding: 1.5rem;
   }
-  
+
   .title {
     font-size: 1.5rem;
   }
-  
+
   .info-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .action-buttons {
     flex-direction: column;
     .btn {

@@ -9,6 +9,7 @@
     subtitle-size="clamp(8px, 1vw, 1vw)"
     class="main-content"
   />
+  <FAQ/>
   <CompanyLocation />
   <FooterGlobal title="Wyślij wiadomość" />
 </template>

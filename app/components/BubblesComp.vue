@@ -2,17 +2,17 @@
 defineProps({
   iconmg: {
     type: String,
-    default: '',
+    default: "",
   },
   title: {
     type: String,
-    default: '',
+    default: "",
   },
   subtitle: {
     type: String,
-    default: '',
+    default: "",
   },
-})
+});
 </script>
 
 <template>
@@ -56,7 +56,7 @@ defineProps({
 
   // Dymek "ogon"
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -18px;
     left: -2px;
@@ -69,7 +69,7 @@ defineProps({
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -24px;
     left: -6px;

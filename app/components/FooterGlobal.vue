@@ -1,22 +1,24 @@
 <script lang="ts" setup>
 defineProps({
-  title: { type: String, default: 'Masz pomysł? Porozmawiajmy!' },
+  title: { type: String, default: "Masz pomysł? Porozmawiajmy!" },
   subtitle: {
     type: String,
-    default: 'Napisz do nas – wspólnie stworzymy coś wyjątkowego.',
+    default: "Napisz do nas – wspólnie stworzymy coś wyjątkowego.",
   },
-})
+});
 
-const name = ref('')
-const email = ref('')
-const message = ref('')
+const name = ref("");
+const email = ref("");
+const message = ref("");
 
 const sendMessage = () => {
-  alert(`Wiadomość wysłana!\nImię: ${name.value}\nEmail: ${email.value}\nTreść: ${message.value}`)
-  name.value = ''
-  email.value = ''
-  message.value = ''
-}
+  alert(
+    `Wiadomość wysłana!\nImię: ${name.value}\nEmail: ${email.value}\nTreść: ${message.value}`
+  );
+  name.value = "";
+  email.value = "";
+  message.value = "";
+};
 </script>
 
 <template>
@@ -33,7 +35,11 @@ const sendMessage = () => {
     <form class="contact-form" @submit.prevent="sendMessage">
       <input type="text" v-model="name" placeholder="Imię" required />
       <input type="email" v-model="email" placeholder="Email" required />
-      <textarea v-model="message" placeholder="Twoja wiadomość" required></textarea>
+      <textarea
+        v-model="message"
+        placeholder="Twoja wiadomość"
+        required
+      ></textarea>
       <button type="submit" class="btn">Wyślij 🚀</button>
     </form>
   </section>
@@ -98,7 +104,7 @@ const sendMessage = () => {
         font-size: clamp(10px, 1vw, 1vw);
 
         &:after {
-          content: '';
+          content: "";
           display: block;
           width: 0%;
           height: 2px;

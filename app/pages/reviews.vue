@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <HeroGlobal
@@ -10,6 +9,7 @@
     class="main-content"
   />
   <ReviewsPack />
+  <FAQ file="/faqreviews.json" />
   <FooterGlobal title="Dołącz do grona zadowolonych klientów" />
 </template>
 

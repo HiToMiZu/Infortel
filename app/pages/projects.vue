@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <HeroGlobal
@@ -10,6 +9,7 @@
     class="main-content"
   />
   <PortfoliosPack />
+  <FAQ file="/faqportfolio.json" />
   <FooterGlobal title="Zobacz wszystkie realizacje" />
 </template>
 
