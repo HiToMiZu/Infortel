@@ -1,0 +1,100 @@
+
+// Font face definition
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('/comic-sans-ms/comici.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* assets/css/main.css */
+.nuxt-loading-indicator {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6) !important;
+  height: 3px !important;
+}
+
+body {
+  font-family: $font_family, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+.text {
+  font-family: $font_family;
+  margin-bottom: 50px;
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(40px, 2.5vw, 3vw);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: clamp(25px, 1.3vw, 1.8vw);
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.btn {
+  background: transparent;
+  border: 2.5px solid $gray;
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-family: $font_family;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  color: $gray;
+  box-shadow: 2px 2px 0 $gray;
+  transform: rotate(-1deg);
+
+  &:hover {
+    transform: rotate(0deg) scale(1.05);
+    background: $primarycolor;
+    color: white;
+    box-shadow: 3px 3px 0 $gray;
+    text-shadow: 1px 1px 0 rgba($gray, 0.5);
+  }
+
+  &.btn--active {
+    background: $supportcolor;
+    color: white;
+    text-shadow: 1px 1px 0 $gray;
+    transform: rotate(0deg);
+    animation: pulse 1.5s ease-in-out infinite;
+
+    .active-burst {
+      opacity: 1;
+      transform: scale(1) rotate(-15deg);
+    }
+  }
+}
+
+.contact-btn {
+  height: 45px;
+  background: $supportcolor !important;
+  color: white !important;
+  text-shadow: 1px 1px 0 $gray !important;
+  border-color: $gray !important;
+  transform: rotate(1deg) !important;
+  position: relative;
+  font-size: 16px;
+
+  &:hover {
+    background: $focus !important;
+    transform: rotate(0deg) scale(1.1) !important;
+  }
+
+  &.btn--active {
+    background: $focus !important;
+    animation: bounce 0.8s ease-in-out infinite !important;
+  }
+}
