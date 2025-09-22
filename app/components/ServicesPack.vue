@@ -1,5 +1,4 @@
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <section class="services">
@@ -38,16 +37,13 @@
 
   .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+    grid-template-columns: repeat(4, minmax(400px, auto));
     justify-items: center;
     @media (max-width: 1600px) {
       grid-template-columns: repeat(2, minmax(400px, auto));
     }
     @media (max-width: 1025px) {
-      grid-template-columns: repeat(1, minmax(500px, auto));
-    }
-    @media (max-width: 450px) {
-      justify-items: flex-start;
+      grid-template-columns: repeat(1, minmax(200px, auto));
     }
   }
 }

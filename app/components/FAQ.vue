@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-import { useHead } from "#app";
-
 const props = defineProps({
   file: { type: String, default: "/faqcontact.json" },
 });
@@ -12,7 +9,6 @@ interface FaqItem {
 }
 
 const faqs = ref<FaqItem[]>([]);
-const openIndex = ref<number | null>(null);
 
 onMounted(async () => {
   const res = await fetch(props.file);
@@ -35,17 +31,16 @@ onMounted(async () => {
     ],
   });
 });
-
-const openIndexes = ref<number[]>([]);
+const openIndexes = ref<Set<number>>(new Set());
 
 const toggle = (index: number) => {
-  if (openIndexes.value.includes(index)) {
-    // close it
-    openIndexes.value = openIndexes.value.filter((i) => i !== index);
+  const newSet = new Set(openIndexes.value);
+  if (newSet.has(index)) {
+    newSet.delete(index);
   } else {
-    // open it
-    openIndexes.value.push(index);
+    newSet.add(index);
   }
+  openIndexes.value = newSet;
 };
 // JS hooks for smooth height animation
 const enter = (el: Element) => {
@@ -91,9 +86,7 @@ const afterLeave = (el: Element) => {
     <div v-for="(faq, index) in faqs" :key="index" class="faq-item">
       <button class="faq-question" @click="toggle(index)">
         {{ faq.question }}
-        <span class="arrow" :class="{ open: openIndexes.includes(index) }"
-          >▼</span
-        >
+        <span class="arrow" :class="{ open: openIndexes.has(index) }">▼</span>
       </button>
 
       <transition
@@ -102,7 +95,7 @@ const afterLeave = (el: Element) => {
         @leave="leave"
         @after-leave="afterLeave"
       >
-        <div v-show="openIndexes.includes(index)" class="faq-answer-wrapper">
+        <div v-show="openIndexes.has(index)" class="faq-answer-wrapper">
           <p class="faq-answer">{{ faq.answer }}</p>
         </div>
       </transition>
@@ -112,7 +105,7 @@ const afterLeave = (el: Element) => {
 
 <style lang="scss" scoped>
 .faq {
-  max-width: 1500px;
+  max-width: 80vw;
   margin: 3rem auto;
   padding: 1rem;
 }

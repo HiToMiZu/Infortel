@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <HeroGlobal
@@ -11,12 +10,12 @@
   />
   <ServicesPack />
   <WhyPack />
-  <FooterGlobal title="Gotowy, aby zacząć swój projekt?" />
+  <FooterGlobal />
 </template>
 
 <style scoped lang="scss">
 .main-content {
   margin-top: -58px;
-  padding-top: 58px; 
+  padding-top: 58px;
 }
 </style>

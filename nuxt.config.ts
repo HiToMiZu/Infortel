@@ -18,14 +18,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/styles.scss"],
 
-  modules: [
-    "@nuxt/eslint",
-    "@nuxt/image",
-    "@nuxt/scripts",
-    "@nuxt/test-utils",
-    "@nuxt/ui",
-    "@nuxt/content",
-  ],
+  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/scripts", "@nuxt/test-utils"],
 
   vite: {
     css: {

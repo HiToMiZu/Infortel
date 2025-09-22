@@ -185,8 +185,8 @@ const fallbackShare = () => {
 }
 
 .icon {
-  width: 1.25rem;
-  height: 1.25rem;
+  min-width: 30px;
+  min-height: 30px;
 }
 
 .map-container {

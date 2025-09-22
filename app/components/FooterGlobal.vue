@@ -5,6 +5,7 @@ defineProps({
     type: String,
     default: "Napisz do nas – wspólnie stworzymy coś wyjątkowego.",
   },
+  showme: { type: Boolean, default: false },
 });
 
 const name = ref("");
@@ -22,7 +23,7 @@ const sendMessage = () => {
 </script>
 
 <template>
-  <section class="contact-section">
+  <section v-if="showme == true" class="contact-section">
     <!-- Contact Hero -->
     <div class="contact-hero">
       <h2>{{ title }}</h2>
@@ -179,6 +180,7 @@ const sendMessage = () => {
 
     input,
     textarea {
+      font-family: $font_family;
       padding: 0.75rem 1rem;
       border: 3px solid $gray;
       border-radius: 15px;

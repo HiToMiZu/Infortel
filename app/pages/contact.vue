@@ -1,5 +1,4 @@
-<script lang="ts">
-</script>
+<script lang="ts"></script>
 
 <template>
   <HeroGlobal
@@ -9,9 +8,9 @@
     subtitle-size="clamp(8px, 1vw, 1vw)"
     class="main-content"
   />
-  <FAQ/>
+  <FAQ />
   <CompanyLocation />
-  <FooterGlobal title="Wyślij wiadomość" />
+  <FooterGlobal title="Wyślij wiadomość" :showme="true" />
 </template>
 
 <style scoped lang="scss">

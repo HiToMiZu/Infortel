@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <HeroGlobal
@@ -11,7 +10,7 @@
   />
   <ProcessesPack />
   <BenefitsPack />
-  <FooterGlobal title="Masz pomysł? Zacznijmy od rozmowy." />
+  <FooterGlobal />
 </template>
 
 <style scoped lang="scss">

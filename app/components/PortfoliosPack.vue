@@ -1,19 +1,19 @@
 <script lang="ts" setup>
-import emblaCarouselVue from 'embla-carousel-vue'
-import Autoplay from 'embla-carousel-autoplay'
+import emblaCarouselVue from "embla-carousel-vue";
+import Autoplay from "embla-carousel-autoplay";
 
 const [emblaRef] = emblaCarouselVue(
   {
     loop: true,
-    align: 'start',
+    align: "start",
     slidesToScroll: 1,
     breakpoints: {
-      '(min-width: 768px)': { slidesToScroll: 1 },
-      '(min-width: 1024px)': { slidesToScroll: 1 },
+      "(min-width: 768px)": { slidesToScroll: 1 },
+      "(min-width: 1024px)": { slidesToScroll: 1 },
     },
   },
-  [Autoplay({ delay: 4000 })],
-)
+  [Autoplay({ delay: 4000 })]
+);
 </script>
 
 <template>
@@ -29,10 +29,10 @@ const [emblaRef] = emblaCarouselVue(
           desc="aplikacja inspirowana stylem menu gry Minecraft, stworzona do zarządzania i prezentacji projektów programistycznych w przejrzysty i interaktywny sposób."
           tech="Native HTML CSS AND JS"
         />
-        <PortfolioComp/>
-        <PortfolioComp/>
-        <PortfolioComp/>
-        <PortfolioComp/>
+        <PortfolioComp />
+        <PortfolioComp />
+        <PortfolioComp />
+        <PortfolioComp />
       </div>
     </section>
   </div>
@@ -40,7 +40,7 @@ const [emblaRef] = emblaCarouselVue(
 
 <style lang="scss" scoped>
 .portfolio-section {
-  width: 70vw;
+  width: 90vw;
   margin: 0 auto;
   margin-bottom: 100px;
 }

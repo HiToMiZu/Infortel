@@ -10,7 +10,7 @@
   />
   <PortfoliosPack />
   <FAQ file="/faqportfolio.json" />
-  <FooterGlobal title="Zobacz wszystkie realizacje" />
+  <FooterGlobal />
 </template>
 
 <style scoped lang="scss">

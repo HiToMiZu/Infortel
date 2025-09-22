@@ -2,11 +2,11 @@
 defineProps({
   title: {
     type: String,
-    default: 'placeholder',
+    default: "placeholder",
   },
   desc: {
     type: String,
-    default: 'placeholder',
+    default: "placeholder",
   },
   tech: {
     type: String,
@@ -14,9 +14,9 @@ defineProps({
   },
   image: {
     type: String,
-    default: '/header-bg.jpeg',
+    default: "/header-bg.jpeg",
   },
-})
+});
 </script>
 <template>
   <div class="main">
@@ -173,7 +173,7 @@ defineProps({
 
     @media (min-width: 480px) {
       height: 40px;
-      width: 140px;
+      width: 160px;
       font-size: 1rem;
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);

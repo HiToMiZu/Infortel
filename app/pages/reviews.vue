@@ -10,7 +10,7 @@
   />
   <ReviewsPack />
   <FAQ file="/faqreviews.json" />
-  <FooterGlobal title="Dołącz do grona zadowolonych klientów" />
+  <FooterGlobal />
 </template>
 
 <style scoped lang="scss">
