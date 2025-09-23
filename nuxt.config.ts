@@ -1,10 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      emailjsServiceId: process.env.NUXT_PUBLIC_EMAILJS_SERVICE_ID,
+      emailjsTemplateId: process.env.NUXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      emailjsPublicKey: process.env.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+    },
+  },
   experimental: {
     viewTransition: true,
   },
   app: {
-    pageTransition: { name: "page" },
     head: {
       title: "Infortel", // default fallback title
       htmlAttrs: {
@@ -18,7 +24,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/styles.scss"],
 
-  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/scripts", "@nuxt/test-utils"],
+  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/scripts", "@nuxt/test-utils", "nuxt-toast"],
 
   vite: {
     css: {
