@@ -1,6 +1,5 @@
-<!-- components/CompanyLocation.vue -->
 <script setup lang="ts">
-// Company data - replace with your actual information
+const toast = useToast();
 const company = ref({
   name: "Infortel Sp. z o. o.",
   address: "ul. Zastawa 18, 17-230 Białowieża",
@@ -47,7 +46,13 @@ const shareLocation = async () => {
 const fallbackShare = () => {
   navigator.clipboard.writeText(directionsUrl.value);
   // You could show a toast notification here
-  alert("Location link copied to clipboard!");
+  toast.success({
+    title: "Dziękujemy!",
+    message:
+      "Twoja wiadomość została wysłana pomyślnie. Odpiszę tak szybko jak to możliwe! ✨",
+    backgroundColor: "#1cace4", // bg color
+    timeout: 5000, // auto close (ms)
+  });
 };
 </script>
 
