@@ -1,129 +1,97 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
 defineOptions({
-  name: 'SuperheroProcess',
-})
+  name: "SuperheroProcess",
+});
 
 // Reactive data
-const currentStep = ref(0)
+const currentStep = ref(0);
 
 // Steps data
 const steps = ref([
   {
-    title: 'Odkrywamy Misję',
+    title: "1. Odkrywamy Misję",
     expandedDetails: [
       {
-        icon: '🎯',
-        title: 'Analiza Celów',
-        description: 'Dokładnie poznajemy Twoje potrzeby biznesowe i cele projektu',
+        icon: "🎯",
+        title: "Cele",
+        description: "Poznajemy potrzeby i oczekiwania",
       },
       {
-        icon: '🔬',
-        title: 'Research',
-        description: 'Badamy rynek, konkurencję i najlepsze praktyki w branży',
+        icon: "🔬",
+        title: "Research",
+        description: "Analizujemy rynek i konkurencję",
       },
       {
-        icon: '📋',
-        title: 'Plan Akcji',
-        description: 'Tworzymy szczegółowy plan realizacji projektu z terminami',
+        icon: "📋",
+        title: "Plan",
+        description: "Tworzymy harmonogram działań",
       },
     ],
   },
   {
-    title: 'Rysujemy Bohatera',
+    title: "2. Rysujemy Bohatera",
     expandedDetails: [
+      { icon: "✏️", title: "Szkice", description: "Układ strony i struktura" },
+      { icon: "🎭", title: "Design", description: "Projektujemy UI/UX" },
       {
-        icon: '✏️',
-        title: 'Wireframing',
-        description: 'Szkicujemy strukturę i układ elementów na stronie',
-      },
-      {
-        icon: '🎭',
-        title: 'UI/UX Design',
-        description: 'Projektujemy intuicyjny i atrakcyjny interfejs użytkownika',
-      },
-      {
-        icon: '🖼️',
-        title: 'Prototypy',
-        description: 'Tworzymy interaktywne prototypy do testowania koncepcji',
+        icon: "🖼️",
+        title: "Prototypy",
+        description: "Tworzymy interaktywne modele",
       },
     ],
   },
   {
-    title: 'Kodujemy Supermoce',
+    title: "3. Kodujemy Supermoce",
     expandedDetails: [
       {
-        icon: '⚡',
-        title: 'Frontend Development',
-        description: 'Kodujemy responsywny interfejs z najnowszymi technologiami',
+        icon: "⚡",
+        title: "Frontend",
+        description: "Budujemy responsywny interfejs",
+      },
+      { icon: "⚙️", title: "Backend", description: "Tworzymy systemy i bazy" },
+      { icon: "🔗", title: "Integracje", description: "Łączymy API i usługi" },
+    ],
+  },
+  {
+    title: "4. Testujemy w Akcji",
+    expandedDetails: [
+      { icon: "🔍", title: "QA", description: "Sprawdzamy funkcjonalność" },
+      {
+        icon: "🚀",
+        title: "Wydajność",
+        description: "Optymalizujemy szybkość",
       },
       {
-        icon: '⚙️',
-        title: 'Backend Systems',
-        description: 'Budujemy solidne systemy backendowe i bazy danych',
-      },
-      {
-        icon: '🔗',
-        title: 'API & Integracje',
-        description: 'Łączymy systemy zewnętrzne i tworzymy API',
+        icon: "📱",
+        title: "Cross-platform",
+        description: "Testy na różnych urządzeniach",
       },
     ],
   },
   {
-    title: 'Testujemy w Akcji',
+    title: "5. Startujemy na Rynek",
     expandedDetails: [
-      {
-        icon: '🔍',
-        title: 'Quality Assurance',
-        description: 'Dokładnie testujemy każdą funkcjonalność projektu',
-      },
-      {
-        icon: '🚀',
-        title: 'Performance Testing',
-        description: 'Optymalizujemy wydajność i szybkość ładowania',
-      },
-      {
-        icon: '📱',
-        title: 'Cross-platform Testing',
-        description: 'Sprawdzamy działanie na różnych urządzeniach i przeglądarkach',
-      },
+      { icon: "🌐", title: "Deployment", description: "Publikujemy projekt" },
+      { icon: "📈", title: "SEO", description: "Optymalizujemy widoczność" },
+      { icon: "💫", title: "Wsparcie", description: "Pomagamy przy starcie" },
     ],
   },
-  {
-    title: 'Startujemy na Rynek',
-    expandedDetails: [
-      {
-        icon: '🌐',
-        title: 'Deployment',
-        description: 'Wdrażamy projekt na serwery produkcyjne',
-      },
-      {
-        icon: '📈',
-        title: 'SEO Optimization',
-        description: 'Optymalizujemy stronę pod kątem wyszukiwarek',
-      },
-      {
-        icon: '💫',
-        title: 'Launch Support',
-        description: 'Wspieramy podczas startu i pomagamy w promocji',
-      },
-    ],
-  },
-])
+]);
 
 // Methods
 const nextStep = () => {
   if (currentStep.value < steps.value.length - 1) {
-    currentStep.value++
+    currentStep.value++;
   }
-}
+};
 
 const previousStep = () => {
   if (currentStep.value > 0) {
-    currentStep.value--
+    currentStep.value--;
   }
-}
+};
 </script>
 <template>
   <div class="superhero-process">

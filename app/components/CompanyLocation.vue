@@ -47,9 +47,7 @@ const fallbackShare = () => {
   navigator.clipboard.writeText(directionsUrl.value);
   // You could show a toast notification here
   toast.success({
-    title: "Dziękujemy!",
-    message:
-      "Twoja wiadomość została wysłana pomyślnie. Odpiszę tak szybko jak to możliwe! ✨",
+    title: "Skopiowane!",
     backgroundColor: "#1cace4", // bg color
     timeout: 5000, // auto close (ms)
   });

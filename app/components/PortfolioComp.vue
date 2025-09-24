@@ -16,6 +16,14 @@ defineProps({
     type: String,
     default: "/header-bg.jpeg",
   },
+  github: {
+    type: String,
+    default: "https://github.com",
+  },
+  site: {
+    type: String,
+    default: "",
+  },
 });
 </script>
 <template>
@@ -29,9 +37,21 @@ defineProps({
         <p class="desc">{{ desc }}</p>
         <p class="tech">What we've used: {{ tech }}</p>
       </div>
-      <router-link class="link" to="/projects">
-        <button class="btn">Get to know more</button>
-      </router-link>
+      <div class="link">
+        <a :href="github" target="_blank" rel="noopener noreferrer">
+          <button class="btn iconed">
+            <Icon name="uil:github" class="icon" />
+          </button>
+        </a>
+        <a :href="github" target="_blank" rel="noopener noreferrer">
+          <button class="btn iconed">
+            <Icon name="ix:web-browser-screen" class="icon" />
+          </button>
+        </a>
+        <router-link to="/projects">
+          <button class="btn">Get to know more</button>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -170,6 +190,8 @@ defineProps({
     border-radius: 8px;
     font-weight: 500;
     cursor: pointer;
+    margin: 0 10px;
+    transform: rotate(0deg);
 
     @media (min-width: 480px) {
       height: 40px;
@@ -202,12 +224,17 @@ defineProps({
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
   }
+  .iconed {
+    padding: 10px;
+    width: 40px;
+    border-radius: 10000px;
+  }
 }
 
 // Hover effect for the entire card on larger screens
 @media (min-width: 768px) {
   .main:hover .link {
-    transform: translateY(0px);
+    transform: translateY(15px);
   }
 }
 
