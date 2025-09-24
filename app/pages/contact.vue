@@ -5,7 +5,7 @@
     title="Masz pytania? Porozmawiajmy!"
     subtitle="Napisz do nas, a wspólnie znajdziemy najlepsze rozwiązanie dla Twojego pomysłu."
     title-size="clamp(30px, 3vw, 3vw)"
-    subtitle-size="clamp(8px, 1vw, 1vw)"
+    subtitle-size="clamp(14px, 1.5vw, 1.5vw)"
     class="main-content"
   />
   <FAQ />

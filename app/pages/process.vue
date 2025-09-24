@@ -5,7 +5,7 @@
     title="Jak tworzymy strony i aplikacje krok po kroku"
     subtitle="Od pierwszej rozmowy do gotowego produktu, który zdobywa użytkowników."
     title-size="clamp(30px, 3vw, 3vw)"
-    subtitle-size="clamp(8px, 1vw, 1vw)"
+    subtitle-size="clamp(14px, 1.5vw, 1.5vw)"
     class="main-content"
   />
   <ProcessesPack />

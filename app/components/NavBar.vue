@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const isMobileMenuOpen = ref(false)
+const isMobileMenuOpen = ref(false);
 
 // Use Nuxt's navigation instead of Vue Router
 async function goPage(destination: string): Promise<void> {
   try {
-    await navigateTo(destination)
+    await navigateTo(destination);
   } catch (error: any) {
-    console.error('Navigation failed:', error)
+    console.error("Navigation failed:", error);
   }
   // Close mobile menu after navigation
-  isMobileMenuOpen.value = false
+  isMobileMenuOpen.value = false;
 }
 
 const isActiveLink = (routePath: string): boolean => {
-  const route = useRoute()
-  return route.path === routePath
-}
+  const route = useRoute();
+  return route.path === routePath;
+};
 
 const toggleMobileMenu = (): void => {
-  isMobileMenuOpen.value = !isMobileMenuOpen.value
-}
+  isMobileMenuOpen.value = !isMobileMenuOpen.value;
+};
 </script>
 
 <template>
@@ -39,7 +39,11 @@ const toggleMobileMenu = (): void => {
 
     <!-- Desktop/Mobile Content -->
     <div class="navbar-left" :class="{ 'mobile-hidden': isMobileMenuOpen }">
-      <NuxtLink to="/" class="logo" :class="{ 'home--active': isActiveLink('/') }">
+      <NuxtLink
+        to="/"
+        class="logo"
+        :class="{ 'home--active': isActiveLink('/') }"
+      >
         <img src="/infortel.png" alt="Logo" width="100px" />
       </NuxtLink>
     </div>
@@ -49,28 +53,40 @@ const toggleMobileMenu = (): void => {
       <div class="mobile-menu-content">
         <button
           @click="goPage('/services')"
-          :class="{ 'mobile-btn': true, 'btn--active': isActiveLink('/services') }"
+          :class="{
+            'mobile-btn': true,
+            'btn--active': isActiveLink('/services'),
+          }"
         >
           <span class="btn-text">Services</span>
           <div v-if="isActiveLink('/services')" class="active-burst">POW!</div>
         </button>
         <button
           @click="goPage('/process')"
-          :class="{ 'mobile-btn': true, 'btn--active': isActiveLink('/process') }"
+          :class="{
+            'mobile-btn': true,
+            'btn--active': isActiveLink('/process'),
+          }"
         >
           <span class="btn-text">Process</span>
           <div v-if="isActiveLink('/process')" class="active-burst">ZAP!</div>
         </button>
         <button
           @click="goPage('/projects')"
-          :class="{ 'mobile-btn': true, 'btn--active': isActiveLink('/projects') }"
+          :class="{
+            'mobile-btn': true,
+            'btn--active': isActiveLink('/projects'),
+          }"
         >
           <span class="btn-text">Projects</span>
           <div v-if="isActiveLink('/projects')" class="active-burst">BAM!</div>
         </button>
         <button
           @click="goPage('/reviews')"
-          :class="{ 'mobile-btn': true, 'btn--active': isActiveLink('/reviews') }"
+          :class="{
+            'mobile-btn': true,
+            'btn--active': isActiveLink('/reviews'),
+          }"
         >
           <span class="btn-text">Reviews</span>
           <div v-if="isActiveLink('/reviews')" class="active-burst">WOW!</div>
@@ -127,7 +143,11 @@ const toggleMobileMenu = (): void => {
       <button
         id="contact"
         @click="goPage('/contact')"
-        :class="{ btn: true, 'contact-btn': true, 'btn--active': isActiveLink('/contact') }"
+        :class="{
+          btn: true,
+          'contact-btn': true,
+          'btn--active': isActiveLink('/contact'),
+        }"
       >
         <span class="btn-text">Contact Us!</span>
       </button>
@@ -312,7 +332,10 @@ nav {
     box-shadow: 2px 2px 0 $gray;
     transform: rotate(0.5deg);
     transition: transform 0.3s ease;
-
+    .btn {
+      height: 35px;
+      text-align: center;
+    }
     &:hover {
       transform: rotate(0deg);
     }

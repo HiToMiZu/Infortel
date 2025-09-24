@@ -5,7 +5,7 @@
     title="Głosy naszych klientów mówią same za siebie."
     subtitle="Zaufanie buduje się poprzez jakość i rezultaty. Oto, co mówią ci, którzy już z nami współpracowali."
     title-size="clamp(30px, 3vw, 3vw)"
-    subtitle-size="clamp(8px, 1vw, 1vw)"
+    subtitle-size="clamp(14px, 1.5vw, 1.5vw)"
     class="main-content"
   />
   <ReviewsPack />
