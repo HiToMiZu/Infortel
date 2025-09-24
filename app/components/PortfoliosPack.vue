@@ -139,6 +139,7 @@ onMounted(() => {
 
   &:hover:not(:disabled) {
     background: $gray;
+    color: white;
     transform: translateY(-1px);
     box-shadow: 3px 3px 0 $gray;
   }

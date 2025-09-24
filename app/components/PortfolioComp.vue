@@ -229,7 +229,9 @@ defineProps({
   .iconed {
     padding: 10px;
     width: 40px;
-    border-radius: 10000px;
+    margin-right: 10px;
+    top: 2px;
+    border-radius: 100px;
   }
 }
 
