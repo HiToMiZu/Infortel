@@ -333,7 +333,7 @@ nav {
     transform: rotate(0.5deg);
     transition: transform 0.3s ease;
     .btn {
-      height: 35px;
+      height: 37px;
       text-align: center;
     }
     &:hover {

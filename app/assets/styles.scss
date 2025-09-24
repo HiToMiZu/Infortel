@@ -1,7 +1,7 @@
 // Font face definition
 @font-face {
   font-family: "Font";
-  src: url("/arialroundedmtbold.ttf") format("opentype");
+  src: url("/comici.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -10,6 +10,37 @@
 .nuxt-loading-indicator {
   background: linear-gradient(to right, #3b82f6, #8b5cf6) !important;
   height: 3px !important;
+}
+
+.loading-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ensures spinner + text stay centered */
+  gap: 0.5rem;
+  width: 100%; /* takes full width of button */
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+.spinner-circle {
+  opacity: 0.25;
+}
+
+.spinner-path {
+  opacity: 0.75;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 body {

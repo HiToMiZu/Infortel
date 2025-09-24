@@ -321,34 +321,4 @@ const isValidEmail = (email: string): boolean => {
     }
   }
 }
-.loading-content {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* ensures spinner + text stay centered */
-  gap: 0.5rem;
-  width: 100%; /* takes full width of button */
-}
-
-.spinner {
-  width: 20px;
-  height: 20px;
-  animation: spin 1s linear infinite;
-}
-
-.spinner-circle {
-  opacity: 0.25;
-}
-
-.spinner-path {
-  opacity: 0.75;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 </style>

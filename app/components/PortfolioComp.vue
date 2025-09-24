@@ -186,7 +186,7 @@ defineProps({
     transition: all 0.3s ease;
     height: 36px;
     width: 120px;
-    font-size: 0.875rem;
+    font-size: clamp(12px, 15px, 28px);
     border-radius: 8px;
     font-weight: 500;
     cursor: pointer;
@@ -196,7 +196,6 @@ defineProps({
     @media (min-width: 480px) {
       height: 40px;
       width: 160px;
-      font-size: 1rem;
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       margin: 10px 0;
