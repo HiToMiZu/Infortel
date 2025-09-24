@@ -1,5 +1,4 @@
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div class="content">
@@ -8,10 +7,8 @@
       <div class="subtitle">I ich opinie 😉</div>
     </div>
     <div class="reviews">
-      <ReviewComp/>
-      <ReviewComp/>
-      <ReviewComp/>
-      <ReviewComp/>
+      <ReviewComp />
+      <ReviewComp />
     </div>
   </div>
 </template>
@@ -19,7 +16,7 @@
 <style lang="scss" scoped>
 .reviews {
   display: grid;
-  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem; // Space between cards
   padding: 2rem 3rem; // Prevents touching borders: top/bottom 2rem, left/right 4rem
   justify-items: center; // Centers cards within their grid areas

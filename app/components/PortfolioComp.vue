@@ -18,7 +18,7 @@ defineProps({
   },
   github: {
     type: String,
-    default: "https://github.com",
+    default: "",
   },
   site: {
     type: String,
@@ -43,7 +43,7 @@ defineProps({
             <Icon name="uil:github" class="icon" />
           </button>
         </a>
-        <a :href="github" target="_blank" rel="noopener noreferrer">
+        <a :href="site" target="_blank" rel="noopener noreferrer">
           <button class="btn iconed">
             <Icon name="ix:web-browser-screen" class="icon" />
           </button>

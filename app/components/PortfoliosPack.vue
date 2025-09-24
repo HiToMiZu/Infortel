@@ -77,10 +77,9 @@ onMounted(() => {
             desc="aplikacja inspirowana stylem menu gry Minecraft, stworzona do zarządzania i prezentacji projektów programistycznych w przejrzysty i interaktywny sposób."
             tech="Native HTML CSS AND JS"
             image="/Screenshot 2025-09-24 at 21.49.25.png"
+            site="https://minecraft-portfolio-manager.netlify.app"
+            github="https://github.com/HiToMiZu/Minecraft-Portfolio-Manager"
           />
-          <PortfolioComp />
-          <PortfolioComp />
-          <PortfolioComp />
           <PortfolioComp />
         </div>
       </section>

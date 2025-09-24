@@ -5,7 +5,7 @@ const fadeInUp = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 300, // seconds
+      delay: 400, // seconds
       duration: 600, // seconds
       easing: "ease-out",
     },
