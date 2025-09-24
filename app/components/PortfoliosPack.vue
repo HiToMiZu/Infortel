@@ -76,6 +76,7 @@ onMounted(() => {
             title="Minecraft Portfolio Manager"
             desc="aplikacja inspirowana stylem menu gry Minecraft, stworzona do zarządzania i prezentacji projektów programistycznych w przejrzysty i interaktywny sposób."
             tech="Native HTML CSS AND JS"
+            image="/Screenshot 2025-09-24 at 21.49.25.png"
           />
           <PortfolioComp />
           <PortfolioComp />

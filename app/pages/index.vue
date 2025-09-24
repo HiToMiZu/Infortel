@@ -1,4 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const fadeInUp = {
+  initial: { opacity: 0, y: 100 },
+  visibleOnce: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 300, // seconds
+      duration: 600, // seconds
+      easing: "ease-out",
+    },
+  },
+};
+</script>
 
 <template>
   <HeroGlobal
@@ -6,19 +19,18 @@
     subtitle="Od linii kodu po pełną historię tworzymy Twój cyfrowy komiks."
     class="main-content"
   />
-  <MotionGroup
-    class="main-content"
-    v-motion
-    :initial="{ opacity: 0, y: 100 }"
-    :visible-once="{ opacity: 1, y: 0 }"
-    :delay="200"
-    :duration="600"
-  >
+  <div v-motion="fadeInUp">
     <ServicesPack />
+  </div>
+  <div v-motion="fadeInUp">
     <ProcessesPack />
+  </div>
+  <div v-motion="fadeInUp">
     <ReviewsPack />
+  </div>
+  <div v-motion="fadeInUp">
     <PortfoliosPack />
-  </MotionGroup>
+  </div>
   <FooterGlobal :showme="true" />
 </template>
 
