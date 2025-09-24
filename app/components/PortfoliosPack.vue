@@ -13,7 +13,7 @@ const [emblaRef, emblaApi] = emblaCarouselVue(
       "(min-width: 1024px)": { slidesToScroll: 1 },
     },
   },
-  [Autoplay({ delay: 4000 })]
+  [Autoplay({ delay: 4000, stopOnMouseEnter: true })]
 );
 
 // Button states

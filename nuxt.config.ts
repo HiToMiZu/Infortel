@@ -31,6 +31,7 @@ export default defineNuxtConfig({
     "@nuxt/test-utils",
     "nuxt-toast",
     "@nuxt/icon",
+    "@vueuse/motion/nuxt",
   ],
 
   vite: {

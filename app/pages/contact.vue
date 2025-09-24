@@ -8,6 +8,7 @@
     subtitle-size="clamp(14px, 1.5vw, 1.5vw)"
     class="main-content"
   />
+
   <FAQ />
   <CompanyLocation />
   <FooterGlobal title="Wyślij wiadomość" :showme="true" />

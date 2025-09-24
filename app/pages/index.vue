@@ -6,10 +6,19 @@
     subtitle="Od linii kodu po pełną historię tworzymy Twój cyfrowy komiks."
     class="main-content"
   />
-  <ServicesPack />
-  <ProcessesPack />
-  <ReviewsPack />
-  <PortfoliosPack />
+  <MotionGroup
+    class="main-content"
+    v-motion
+    :initial="{ opacity: 0, y: 100 }"
+    :visible-once="{ opacity: 1, y: 0 }"
+    :delay="200"
+    :duration="600"
+  >
+    <ServicesPack />
+    <ProcessesPack />
+    <ReviewsPack />
+    <PortfoliosPack />
+  </MotionGroup>
   <FooterGlobal :showme="true" />
 </template>
 

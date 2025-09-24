@@ -8,6 +8,7 @@
     subtitle-size="clamp(14px, 1.5vw, 1.5vw)"
     class="main-content"
   />
+
   <PortfoliosPack />
   <FAQ file="/faqportfolio.json" />
   <FooterGlobal />
