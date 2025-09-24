@@ -155,23 +155,11 @@ onMounted(() => {
   }
 
   @media (max-width: 767px) {
-    width: 40px;
-    height: 40px;
-
-    svg {
-      width: 20px;
-      height: 20px;
-    }
+    display: none;
   }
 
   @media (max-width: 479px) {
-    width: 36px;
-    height: 36px;
-
-    svg {
-      width: 18px;
-      height: 18px;
-    }
+    display: none;
   }
 }
 

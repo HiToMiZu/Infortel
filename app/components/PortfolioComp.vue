@@ -199,12 +199,14 @@ defineProps({
       font-size: 1rem;
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      margin: 10px 0;
     }
 
     @media (min-width: 768px) {
       height: 44px;
       width: 160px;
       box-shadow: 0 0 2rem 0 rgb(0 0 0 / 0.2);
+      margin: 10px 0;
     }
 
     &:hover {
@@ -247,6 +249,13 @@ defineProps({
   .text .desc {
     margin-bottom: 0.75rem;
   }
+  .link .iconed {
+    width: 40px;
+    margin: 10px;
+  }
+  .link .btn {
+    margin: 10px;
+  }
 }
 
 // Extra small screens
@@ -266,6 +275,10 @@ defineProps({
     height: 38px;
     width: 140px;
     font-size: 0.8rem;
+    margin-top: 5px;
+  }
+  .link .iconed {
+    width: 40px;
   }
 }
 </style>
